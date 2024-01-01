@@ -70,6 +70,21 @@ overflow: hidden;
 .btn-hero {
     font-size: 1.5rem;
     padding: 10px 30px;
+}
+
+/* booking page */
+.profile-info {
+    margin-bottom: 30px;
+}
+.avatar {
+    max-width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.booking-form {
+    margin-top: 30px;
+}
+
 /* Widescreen media query targeting screens with a minimum width of 1200px */
 @media screen and (min-width: 1200px) {
     /* Your widescreen-specific CSS styles here */
