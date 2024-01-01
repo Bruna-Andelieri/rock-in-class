@@ -1,12 +1,12 @@
-
 /* Override Bootstrap variables */
 :root {
-    --white: #eaeaea;
-    --onyx: #313638;
-    --olivine: #7eb77f;
-    --schoolbus: #fdd81b;
-    --veronica: #9620f1;
-    --font-size: 16px;
+  --white: #eaeaea;
+  --onyx: #313638;
+  --outerspace: #434a4c;
+  --olivine: #7eb77f;
+  --schoolbus: #fdd81b;
+  --veronica: #9620f1;
+  --font-size: 16px;
 }
 
 /* Remove all Bootstrap border-radius */
@@ -17,127 +17,177 @@
 }
 
 * {
-    color: var(--white) !important;
+  color: var(--white) !important;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: none; /* Remove default borders */
 }
 
 body {
-    background-color: var(--onyx) !important;
+  background-color: var(--onyx) !important;
 }
 
+header .nav-link {
+  font-size: 1.2rem !important;
+  color: var(--onyx) !important;
+}
+
+header .nav-link:hover {
+  text-decoration: underline !important;
+}
+
+header .sigup {
+  background-color: var(--onyx) !important;
+  color: var(--white) !important;
+  border-radius: 10%;
+  padding: 7px !important;
+}
+
+/* forms style */
+/* Input field styles */
+form {
+  color: var(--onyx) !important;
+  border: 0;
+}
+
+/* Label styles */
+label {
+  color: var(--onyx); /* Set label text color */
+  font-weight: bold; /* Set label font-weight */
+}
+
+/* Checkbox styles */
+form input {
+  margin-top: 3px; /* Adjust checkbox alignment */
+}
 
 /* Override specific Bootstrap classes */
 .navbar {
-    background-color: var(--schoolbus) !important;
-    padding: 1rem !important;
-  }
-  
-  .navbar-brand {
-      color: var(--onyx) !important;
-      font-weight: 700 !important;
-  }
-  
-  
-  header .nav-link{
-      font-size: 1.2rem !important;
-      color: var(--onyx) !important;
-  
-  }
-  
-  header .nav-link:hover{
-      text-decoration: underline !important;
-  }
-  
-  header .sigup{
-      background-color: var(--onyx) !important;
-      color: var(--white) !important;
-      border-radius: 10%;
-      padding: 7px !important;
-  }
-  
-  /* Replace all button colors */
-  /* Primary Button */
-  .btn-primary {
-      background-color: var(--veronica) !important;
-      border: 0px !important;
-    }
-  
-  /* replace card colors */
-  .card {
-    background-color: var(--schoolbus)!important;
-    border: 0!important;
+  background-color: var(--schoolbus) !important;
+  padding: 1rem !important;
 }
 
-.card .card-title, .card-text{
-    color: var(--onyx) !important;
+.navbar-brand {
+  color: var(--onyx) !important;
+  font-weight: 700 !important;
 }
 
+/* Replace all button colors */
+/* Primary Button */
+.btn-primary {
+  background-color: var(--veronica) !important;
+  border: 0px !important;
+}
+
+/* replace card colors */
+.card {
+  background-color: var(--schoolbus) !important;
+  border: 0 !important;
+  color: var(--onyx) !important;
+}
+
+.card-header {
+  background-color: var(--outerspace);
+  color: var(--onyx);
+}
+
+.card .card-title,
+.card-text,
+.card-body,
+form p,
+label {
+  color: var(--onyx) !important;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+  background-color: var(--outerspace); /* Set your desired background color */
+  border: 1px solid var(--onyx);
+  border-radius: 0;
+  color: var(--white);
+  padding: 5px;
+  box-sizing: content-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:hover {
+  background-color: var(--outerspace); /* Set your desired background color */
+  border: 1px solid var(--olivine);
+}
 
 /* Custom styles for the hero banner */
 .hero-banner {
-position: relative;
-height: 500px; /* Adjust height as needed */
-overflow: hidden;
+  position: relative;
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden;
 }
 
 .hero-banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust opacity (last value) as needed */
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity (last value) as needed */
+  z-index: 1;
 }
 
 .hero-banner img {
-    width: 100%;
-    height: auto;
-    z-index: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
 }
 
 .hero-banner-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    color: #fff;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
 }
 
 .hero-banner h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 .hero-banner p {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
 }
 
 .btn-hero {
-    font-size: 1.5rem;
-    padding: 10px 30px;
+  font-size: 1.5rem;
+  padding: 10px 30px;
 }
 
 /* booking page */
 .profile-info {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .avatar {
-    max-width: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 .booking-form {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 /* Widescreen media query targeting screens with a minimum width of 1200px */
 @media screen and (min-width: 1200px) {
-    /* Your widescreen-specific CSS styles here */
-    /* For example: */
-    .hero-banner {
-        min-height: 37.5rem;
-    }
+  /* Your widescreen-specific CSS styles here */
+  /* For example: */
+  .hero-banner {
+    min-height: 37.5rem;
   }
+}
