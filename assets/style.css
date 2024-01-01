@@ -61,6 +61,16 @@ body {
       border: 0px !important;
     }
   
+  /* replace card colors */
+  .card {
+    background-color: var(--schoolbus)!important;
+    border: 0!important;
+}
+
+.card .card-title, .card-text{
+    color: var(--onyx) !important;
+}
+
 
 /* Custom styles for the hero banner */
 .hero-banner {
@@ -130,4 +140,4 @@ overflow: hidden;
     .hero-banner {
         min-height: 37.5rem;
     }
-}
+  }
