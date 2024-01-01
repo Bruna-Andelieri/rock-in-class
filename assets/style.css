@@ -24,6 +24,44 @@ body {
     background-color: var(--onyx) !important;
 }
 
+
+/* Override specific Bootstrap classes */
+.navbar {
+    background-color: var(--schoolbus) !important;
+    padding: 1rem !important;
+  }
+  
+  .navbar-brand {
+      color: var(--onyx) !important;
+      font-weight: 700 !important;
+  }
+  
+  
+  header .nav-link{
+      font-size: 1.2rem !important;
+      color: var(--onyx) !important;
+  
+  }
+  
+  header .nav-link:hover{
+      text-decoration: underline !important;
+  }
+  
+  header .sigup{
+      background-color: var(--onyx) !important;
+      color: var(--white) !important;
+      border-radius: 10%;
+      padding: 7px !important;
+  }
+  
+  /* Replace all button colors */
+  /* Primary Button */
+  .btn-primary {
+      background-color: var(--veronica) !important;
+      border: 0px !important;
+    }
+  
+
 /* Custom styles for the hero banner */
 .hero-banner {
 position: relative;
