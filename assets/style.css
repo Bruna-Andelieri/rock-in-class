@@ -70,4 +70,11 @@ overflow: hidden;
 .btn-hero {
     font-size: 1.5rem;
     padding: 10px 30px;
+/* Widescreen media query targeting screens with a minimum width of 1200px */
+@media screen and (min-width: 1200px) {
+    /* Your widescreen-specific CSS styles here */
+    /* For example: */
+    .hero-banner {
+        min-height: 37.5rem;
+    }
 }
