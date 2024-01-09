@@ -1,6 +1,6 @@
 from django.db import models
 from tutor.models import Tutor
-from tutor.models import User
+from user.models import User
 
 # Create your models here.
 class Schedule(models.Model):
