@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">MRA</a>
+
+        <!-- Hamburger menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar items -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="tutor_list.html">Tutors</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Lessons</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="auth.html">Log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sigup" href="signup.html">Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <div class="hero-banner">
+        <img src="./assets/images/banner.jpg" alt="Hero Image" />
+        <div class="hero-banner-overlay"></div>
+        <div class="hero-banner-content container">
+          <h1>Welcome to Our Website</h1>
+          <p>This is a sample hero banner created using Bootstrap.</p>
+          <a href="about.html" class="btn btn-primary btn-hero">Learn More</a>
+        </div>
+      </div>
+    </header>
+    <!-- Hero -->
+
+    <section class="pt-5 pb-5 text-center">
+      <div class="container">
+        <h2>Find Your Way to Learn</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        </p>
+      </div>
+    </section>
+
+    <!-- casroulsel -->
+    <section class="pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h3 class="mb-3">Tutors Highlights</h3>
+          </div>
+          <div class="col-6 text-right">
+            <a
+              class="btn btn-primary mb-3 mr-1"
+              href="#carouselExampleIndicators2"
+              role="button"
+              data-slide="prev"
+            >
+              <i class="fa fa-arrow-left"></i>
+            </a>
+            <a
+              class="btn btn-primary mb-3"
+              href="#carouselExampleIndicators2"
+              role="button"
+              data-slide="next"
+            >
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="col-12">
+            <div
+              id="carouselExampleIndicators2"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Electric Guitar Tutor - John Doe</h4>
+                          <p class="card-text">
+                            Electric guitar instructor with 8+ years' experience, specializing in rock and blues genres, fostering technical skill and musical creativity.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Piano Tutor - Jane Smith</h4>
+                          <p class="card-text">
+                            Accomplished piano teacher offering tailored lessons, integrating theory and practice to nurture a deep appreciation for diverse musical styles.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Bass Guitar Tutor - Alex Johnson</h4>
+                          <p class="card-text">
+                            Bass guitar mentor with expertise in funk, jazz, and pop, guiding students through rhythm, technique, and performance confidence.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Drum Tutor - Emily Davis</h4>
+                          <p class="card-text">
+                            Seasoned drum instructor proficient in various styles, fostering rhythmic precision and creativity in students of all skill levels.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Violin Tutor - William Garcia</h4>
+                          <p class="card-text">
+                            Accomplished violin teacher leveraging 10+ years' expertise to nurture technique, musicality, and a passion for classical and contemporary repertoire.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Saxophone Tutor - Olivia Nguyen</h4>
+                          <p class="card-text">
+                            Dedicated saxophone mentor specializing in jazz improvisation, guiding students to develop tone, technique, and musical expression.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Special title treatment</h4>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Special title treatment</h4>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6"
+                        />
+                        <div class="card-body">
+                          <h4 class="card-title">Special title treatment</h4>
+                          <p class="card-text">
+                            With supporting text below as a natural lead-in to
+                            additional content.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- casroulsel -->
+
+    <!-- footer -->
+    <footer class="py-3 my-4">
+      <div class="container">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Tutors</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Lessons</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-muted">About</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">
+          &copy; 2023 Developed by Bruna Andelieri
+        </p>
+      </div>
+    </footer>
+    <!--footer -->
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
