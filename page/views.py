@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from page.forms import RegisterForm
+
 # Create your views here.
 def page_index(request):
     return render(request, "index.html")
@@ -14,7 +16,8 @@ def page_lesson(request):
 
 
 def page_register(request):
-    return render(request, "register.html")
+    form = RegisterForm()
+    return render(request, "register.html", {'form':form})
 
 
 def page_auth(request):

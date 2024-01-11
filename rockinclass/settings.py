@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "user",
     "tutor",
     "booking",
+    "page"
 ]
 
 MIDDLEWARE = [
