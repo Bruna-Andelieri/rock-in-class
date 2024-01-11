@@ -1,5 +1,5 @@
 {% load static %}
-{% load bootstrap5 %}
+
 
 <!DOCTYPE html>
 <html>
@@ -12,13 +12,16 @@
       rel="stylesheet"
     />
     <!-- Bootstrap CSS -->
-    <!-- <link
+    <link
       rel="stylesheet"
-      type="text/css"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    /> -->
+    />
+
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-    
+
+
   </head>
 
   <body>
@@ -26,7 +29,7 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <!-- Brand -->
-        <a class="navbar-brand" href="index.html">MRA</a>
+        <a class="navbar-brand" href="{% url 'index' %}">MRA</a>
 
         <!-- Hamburger menu -->
         <button
@@ -42,14 +45,14 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="tutor_list.html">Tutors</a>
+              <a class="nav-link" href="{% url 'tutor' %}">Tutors</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Lessons</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'lesson' %}">Lessons</a></li>
             <li class="nav-item">
-              <a class="nav-link" href="auth.html">Log in</a>
+              <a class="nav-link" href="{% url 'auth' %}">Log in</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link sigup" href="signup.html">Sign up</a>
+              <a class="nav-link sigup" href="{% url 'register' %}">Sign up</a>
             </li>
           </ul>
         </div>
@@ -62,13 +65,11 @@
         <div class="hero-banner-content container">
           <h1>Welcome to Our Website</h1>
           <p>This is a sample hero banner created using Bootstrap.</p>
-          <a href="about.html" class="btn btn-primary btn-hero">Learn More</a>
+          <a href="{% url 'about' %}" class="btn btn-primary btn-hero">Learn More</a>
         </div>
       </div>
     </header>
     <!-- Hero -->
-
-    {% bootstrap_messages %}
     
     {% block content %}
 
@@ -79,19 +80,19 @@
         <div class="container">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">Home</a>
+              <a href="{% url 'index' %}" class="nav-link px-2 text-muted">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">Tutors</a>
+              <a href="{% url 'tutor' %}" class="nav-link px-2 text-muted">Tutors</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">Lessons</a>
+              <a href="{% url 'lesson' %}" class="nav-link px-2 text-muted">Lessons</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">Contact</a>
+              <a href="{% url 'contact' %}" class="nav-link px-2 text-muted">Contact</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-muted">About</a>
+              <a href="{% url 'about' %}" class="nav-link px-2 text-muted">About</a>
             </li>
           </ul>
           <p class="text-center text-muted">
@@ -104,12 +105,10 @@
       
       
       
-      <!-- Bootstrap JavaScript -->
-      {% bootstrap_css %}
-      {% bootstrap_javascript %}
-      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
     </body>
   </html>
 </html>

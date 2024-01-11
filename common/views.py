@@ -7,3 +7,21 @@ def page_index(request):
 
 def page_tutor(request):
     return render(request, "tutor.html")
+
+
+def page_lesson(request):
+    return render(request, "lesson.html")
+
+
+def page_register(request):
+    return render(request, "register.html")
+
+
+def page_auth(request):
+    return render(request, "auth.html")
+
+def page_contact(request):
+    return render(request, "contact.html")
+
+def page_about(request):
+    return render(request, "about.html")
