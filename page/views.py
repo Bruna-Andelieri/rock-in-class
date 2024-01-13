@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.contrib import messages
 
 from page.forms import RegisterForm
 
@@ -16,7 +17,25 @@ def page_lesson(request):
 
 
 def page_register(request):
-    form = RegisterForm()
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            # save form on database
+            form.save()
+
+            # add success message
+            messages.success(request, 'Success!')
+        
+            return redirect("/auth")
+        
+        else:
+            # Adicionar error message - danger
+            messages.error(request, 'Please correct errors in the form before submitting.', extra_tags='alert-danger')
+   
+        
+    else:
+        form = RegisterForm()
+    
     return render(request, "register.html", {'form':form})
 
 

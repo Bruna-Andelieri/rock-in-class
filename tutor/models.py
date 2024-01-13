@@ -4,10 +4,12 @@ from cloudinary.models import CloudinaryField
 
 class Instrument(models.Model):
     name =  models.CharField(max_length=50, unique=True)
+    color = models.CharField(max_length=6, null=True)
 
 
 class MusicStyle(models.Model):
     name =  models.CharField(max_length=50, unique=True)
+    color = models.CharField(max_length=6, null=True)
 
 
 # Create your models here.
