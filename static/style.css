@@ -110,10 +110,11 @@ form input {
 .card .card-title,
 .card-text,
 .card-body,
-form p,
-label {
+form p {
   color: var(--onyx) !important;
 }
+
+
 
 form input[type="text"],
 form input[type="email"],
