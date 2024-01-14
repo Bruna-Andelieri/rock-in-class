@@ -1,13 +1,13 @@
 ### FRONTEND
-- [ ] mudar o logo
+- [x] mudar o logo
 - [ ] arredondar botoes da barra de navegacao
-- [ ] adicionar campo password e nome no signup
-- [ ] adicionar frase para alterar de signup para login
-- [ ] mudar frase do herobanner
+- [x] adicionar campo password e nome no signup
+- [x] adicionar frase para alterar de signup para login
+- [ ] mudar frase do hero banner
 - [ ] adicionar parallax na iagem do herobanner
-- [ ] adicionar menssagens do bootstrap de validacao 
+- [x] adicionar menssagens do bootstrap de validacao 
 
 ### BACKEND
-- [ ] formulario do signup
+- [x] formulario do signup
 - [ ] formulario de login
 - [ ] formulario de booking
