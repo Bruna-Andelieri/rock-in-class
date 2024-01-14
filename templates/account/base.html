@@ -54,7 +54,6 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'tutor' %}">Tutors</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'lesson' %}">Lessons</a></li>
             {% if user.is_authenticated %}
             <li class="nav-item"><a class="nav-link" href="{% url 'account_email' %}">Change E-mail</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a></li>
@@ -92,9 +91,6 @@
             </li>
             <li class="nav-item">
               <a href="{% url 'tutor' %}" class="nav-link px-2 text-muted">Tutors</a>
-            </li>
-            <li class="nav-item">
-              <a href="{% url 'lesson' %}" class="nav-link px-2 text-muted">Lessons</a>
             </li>
             <li class="nav-item">
               <a href="{% url 'contact' %}" class="nav-link px-2 text-muted">Contact</a>
