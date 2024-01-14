@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 
 from tutor.models import Tutor
 
-BOOKING_STATUS = ((0, "Awaiting Confirmation"), (1, "Confirm Booking"),
-                  (2, "Booking Declined"))
 
 # Create your models here.
 class Booking(models.Model):
@@ -12,5 +10,4 @@ class Booking(models.Model):
     tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE, related_name="booking_tutor")
     booking_date = models.DateField(null=False, blank=False)
     booking_time = models.CharField(null=False, blank=False, max_length=5)
-    booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
     message =  models.CharField(max_length=200, unique=True)
