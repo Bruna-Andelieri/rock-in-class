@@ -19,3 +19,6 @@ def page_contact(request):
 
 def page_about(request):
     return render(request, "about.html")
+
+def page_booking(request):
+    return render(request, "booking.html")
