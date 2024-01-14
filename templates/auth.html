@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 
 {% block content %}
     <!-- Hero -->
@@ -11,37 +11,19 @@
               <h3 class="text-center">Sign In</h3>
             </div>
             <div class="card-body">
-              <form>
+    
+              <form action="" method="post" autocomplete="off">
+                {% csrf_token %}
                 <p>
                   If you have not created an account yet, then please
-                  <a>sign up</a> first.
+                  <a href="{% url 'register' %}">sign up</a> first.
                 </p>
-                <div class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="floatingPassword"
-                    placeholder="Password"
-                  />
-                  <label for="floatingPassword">Password</label>
-                </div>
+              
+                {{form|crispy}}
 
-                <div class="checkbox mb-3">
-                  <label>
-                    <input type="checkbox" value="remember-me" /> Remember me
-                  </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">
-                  Sign in
+               
+                <button type="submit" class="btn btn-primary btn-block">
+                  Sign Up
                 </button>
               </form>
             </div>

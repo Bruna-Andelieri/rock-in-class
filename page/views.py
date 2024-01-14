@@ -1,7 +1,9 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
+from django.contrib.auth.hashers import check_password, make_password
 
-from page.forms import RegisterForm
+from page.forms import RegisterForm, AuthForm
+from user.models import User 
 
 # Create your views here.
 def page_index(request):
@@ -20,7 +22,7 @@ def page_register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
-            # save form on database
+           
             form.save()
 
             # add success message
@@ -40,7 +42,33 @@ def page_register(request):
 
 
 def page_auth(request):
-    return render(request, "auth.html")
+    if request.method == 'POST':
+        form = AuthForm(request.POST)
+
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+
+            try:
+                user = User.objects.get(email=email)
+            except User.DoesNotExist:
+                user = None
+
+            if user and check_password(password, user.password):
+                # Usuário autenticado com sucesso
+                messages.success(request, 'Login bem-sucedido. Bem-vindo de volta!')
+                return redirect('index')  # Substitua 'página_inicial' pela URL desejada
+            else:
+                # Autenticação falhou
+                messages.error(request, 'Erro ao fazer login. Verifique suas credenciais.')
+
+            
+           
+    else:
+        form = AuthForm()
+
+    return render(request, 'auth.html', {'form': form})
+   
 
 def page_contact(request):
     return render(request, "contact.html")
