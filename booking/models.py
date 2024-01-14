@@ -1,12 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 from tutor.models import Tutor
-from user.models import User
+
+BOOKING_STATUS = ((0, "Awaiting Confirmation"), (1, "Confirm Booking"),
+                  (2, "Booking Declined"))
 
 # Create your models here.
-class Schedule(models.Model):
-    tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE,
-                             related_name="schedule")
-    user = models.ForeignKey(User, on_delete=models.CASCADE,
-                             related_name="schedule")
-    when = models.DateTimeField(null=True)
+class Booking(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name="booking_student")
+    tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE, related_name="booking_tutor")
+    booking_date = models.DateField(null=False, blank=False)
+    booking_time = models.CharField(null=False, blank=False, max_length=5)
+    booking_status = models.IntegerField(choices=BOOKING_STATUS, default=0)
     message =  models.CharField(max_length=200, unique=True)
