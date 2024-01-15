@@ -7,6 +7,5 @@ from .views import (
 
 urlpatterns = [
     path("", tutor, name="tutor"),
-    path("detail", tutor_detail, name="tutor_detail"),
-   
+    path("<int:tutor_id>/", tutor_detail, name="tutor_detail"),
 ]

@@ -9,5 +9,7 @@
 
 ### BACKEND
 - [x] formulario do signup
-- [ ] formulario de login
-- [ ] formulario de booking
+- [x] formulario de login
+- [ ] formulario de tutor detail
+- [ ] crud booking
+- [ ] adicionar perfil usuario
