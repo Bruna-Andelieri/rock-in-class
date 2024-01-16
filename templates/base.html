@@ -3,116 +3,125 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+
+<head>
+  <!--google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
 
+<body>
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert {{ message.tags }}">
+    {{ message }}
+  </div>
+  {% endfor %}
+  {% endif %}
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <!-- Brand -->
+      <a class="navbar-brand" href="{% url 'index' %}">Rock in Class</a>
 
-  </head>
+      <!-- Hamburger menu -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <body>
-    {% if messages %}
-      {% for message in messages %}
-          <div class="alert {{ message.tags }}">
-              {{ message }}
-          </div>
-      {% endfor %}
-    {% endif %}
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <!-- Brand -->
-        <a class="navbar-brand" href="{% url 'index' %}">Rock in Class</a>
+      <!-- Navbar items -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'tutor' %}">Tutors</a>
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item"><a class="nav-link" href="{% url 'account_email' %}">Change E-mail</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a></li>
+          <li class="nav-item">
+            <a class="nav-link" aria-label="profile" href="{% url 'profile' %}"><i
+                class="fa-solid fa-circle-user"></i></a>
+            <!--{% if user.customer.profile_image %}
+                <img src="{{ user.customer.profile_image.url }}" class="profile-image-nav"></a>
+                {% else %}-->
 
-        <!-- Hamburger menu -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar items -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'tutor' %}">Tutors</a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item"><a  class="nav-link" href="{% url 'account_email' %}">Change E-mail</a></li>
-            <li class="nav-item"><a  class="nav-link" href="{% url 'account_logout' %}">Sign Out</a></li>
-            {% else %}
-            <li class="nav-item"><a  class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
-            <li class="nav-item sigup"><a  href="{% url 'account_signup' %}">Sign Up</a></li>
-            {% endif %}
-          </ul>
-        </div>
-      </nav>
-
-      <!-- Hero -->
-      <div class="hero-banner">
-        <img src="{% static 'images/banner.jpg' %}" alt="Hero Image" />
-        <div class="hero-banner-overlay"></div>
-        <div class="hero-banner-content container">
-          <h1>Welcome to Our Website</h1>
-          <p>This is a sample hero banner created using Bootstrap.</p>
-          <a href="{% url 'about' %}" class="btn btn-primary btn-hero">Learn More</a>
-        </div>
+            <!--{% endif %}-->
+          </li>
+          {% if user.is_superuser %}
+          <li class="nav-item">
+            <a class="nav-link" aria-label="admin" href="{% url 'admin:index' %}"><i class="fa-solid fa-unlock"></i></a>
+          </li>
+          {% endif %}
+          {% else %}
+          <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
+          <li class="nav-item sigup"><a href="{% url 'account_signup' %}">Sign Up</a></li>
+          {% endif %}
+        </ul>
       </div>
-    </header>
+    </nav>
+
     <!-- Hero -->
-    
-    {% block content %}
+    <div class="hero-banner">
+      <img src="{% static 'images/banner.jpg' %}" alt="Hero Image" />
+      <div class="hero-banner-overlay"></div>
+      <div class="hero-banner-content container">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a sample hero banner created using Bootstrap.</p>
+        <a href="{% url 'about' %}" class="btn btn-primary btn-hero">Learn More</a>
+      </div>
+    </div>
+  </header>
+  <!-- Hero -->
 
-    {% endblock content %}
+  {% block content %}
 
-    <!-- footer -->
-    <footer class="py-3 my-4">
-        <div class="container">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item">
-              <a href="{% url 'index' %}" class="nav-link px-2 text-muted">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="{% url 'tutor' %}" class="nav-link px-2 text-muted">Tutors</a>
-            </li>
-            <li class="nav-item">
-              <a href="{% url 'contact' %}" class="nav-link px-2 text-muted">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a href="{% url 'about' %}" class="nav-link px-2 text-muted">About</a>
-            </li>
-          </ul>
-          <p class="text-center text-muted">
-            &copy; 2023 Developed by Bruna Andelieri
-          </p>
-        </div>
-      </footer>
-      <!--footer -->
+  {% endblock content %}
 
-      
-      
-      
+  <!-- footer -->
+  <footer class="py-3 my-4">
+    <div class="container">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="{% url 'index' %}" class="nav-link px-2 text-muted">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'tutor' %}" class="nav-link px-2 text-muted">Tutors</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'contact' %}" class="nav-link px-2 text-muted">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'about' %}" class="nav-link px-2 text-muted">About</a>
+        </li>
+      </ul>
+      <p class="text-center text-muted">
+        &copy; 2023 Developed by Bruna Andelieri
+      </p>
+    </div>
+  </footer>
+  <!--footer -->
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
-    </body>
-  </html>
+
+  <!-- google fonts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/3af9543e24.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
 </html>

@@ -1,120 +1,60 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 
 {% block content %}
 
 {% if user.is_authenticated %}
-<h3 class="profile-heading">Profile Page</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="profile-heading">Profile Page</h2>
 
-<div class="container profile-page">
-    <div class="row">
-      <div class="col-sm-12 col-md-4 text-center image-col">
-        <h5><strong>{{ user.username}}'s</strong> Profile</h5>
-        <!--Profile image-->
-        {% if "placeholder" in user.customer.profile_image %}
-            <img src="https://cdn.pixabay.com/photo/2014/11/14/13/29/evil-530640_960_720.jpg" alt="profile picture" class="profile-image">
-        {% else %}
-            <img src="{{ user.customer.profile_image.url }}" alt="profile picture"  class="profile-image">
-        {% endif %}
-        <!--Change image button-->
-        <p><a href="{% url 'edit_image' user.id %}" aria-label="change image">Change profile pic</a></p>
-        <h5 class="text-center"><strong>Joined:</strong> {{ user.date_joined }}</h5>
-      </div>
-      <!--Personal information-->
-        <div class="col-sm-12 col-md-8 personal-information">
-            <h3 class="heading-space"><strong>Personal Information</strong></h3>
-            <h5><strong>First Name:</strong> {{ user.customer.first_name }} | <strong>Last Name:</strong> {{ user.customer.last_name }}</h5>  
-            <h5><strong>Username:</strong> {{ user.username }} <a href="{% url 'edit_username' user.id %}" aria-label="change username">Edit</a></h5>  
-            <h5><strong>Account Number:</strong> 100{{ user.id }}</h5> 
-            <h5><strong>Email:</strong> {{ user.customer.email }}</h5>
-            <h5><strong>Phone:</strong> {{user.customer.contact_phone}}</h5>
-            <a href="{% url 'edit_profile' user.id %}" aria-label="change personal information" class="btn btn-primary text-center edit-profile-link">Edit Profile</a>
-
-            <h5 class="text-center">To close your account please select the button below:</h5>
-              <!-- Close account modal -->
-            <button type="button" class="btn btn-danger" aria-label="delete account" data-bs-toggle="modal" data-bs-target="#closeAccountModal">
-                Delete Account
-            </button>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="closeAccountModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="ModalLabel">Close account</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    Are you sure you would like to close your account?
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="go back">Go back</button>
-                    <a href="{% url 'delete_account' user.id %}" aria-label="close account"><button type="button" class="btn btn-danger">Cancel Account</button></a>
-                    </div>
+                <div class="container mt-5">
+                    <h2>User Info</h2>
+                    <form method="post" action="{% url 'profile' %}">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button class="btn-primary" "submit">Update</button>
+                    </form>
                 </div>
-                </div>
-            </div>
 
-             <!-- End of modal-->
+
+
+
+                <!-- Reservation Block -->
+                <div class="container mt-5">
+                    <h2>Booking Table</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Booking Date</th>
+                                <th>Booking Time</th>
+                                <th>Message</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for booking in bookings %}
+                            <tr>
+                                <td>{{ booking.id }}</td>
+                                <td>{{ booking.booking_date }}</td>
+                                <td>{{ booking.booking_time }}</td>
+                                <td>{{ booking.message }}</td>
+                                <td>
+                                    <a href="{% url 'edit_booking' %}" class="btn btn-primary btn-sm">Edit</a>
+                                    <a href="{% url 'delete_booking' %}" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
         </div>
     </div>
-</div>
-
-
-<div class="container profile-booking">
-    <div class="row">
-        <div class="col-sm-12 personal-information">
-            <h4 class="underline bookings-heading">Bookings</h4>
-        </div>
-    </div>
-    <div class="row mobile-hidden">
-        <div class="col-sm-6 text-center">
-            <p><strong>Title:</strong></p>
-        </div>
-        <div class="col-sm-3 text-center">
-            <p><strong>Number of Attendees:</strong></p>
-        </div>
-        <div class="col-sm-3 text-center">
-            <p><strong>Status:</strong></p>
-        </div>
-    </div>
-
-    {% for booking in bookings %}
-        {% if user.customer.id == booking.customer.id %}
-            <hr>
-            <!-- Reservation Block -->
-            <div class="row {% if forloop.counter0|divisibleby:2 %} reservation {% else %} alternate-reservation {% endif %}">
-                <!-- Left Column | User information and booking details-->
-                <div class="col-sm-6 details-col">
-                    <p><strong>Title:</strong> Restaurant Reservation for {{booking.customer.first_name }} {{booking.customer.last_name}}</p>
-                    <p><strong>Date:</strong>{{ booking.booking_date }} | <strong>Time:</strong>{{booking.booking_time}}</p>
-                    <p><strong>Booking Number:</strong> LA{{ booking.id }}</p>
-                </div>
-                <!-- Middle Column | Number of attendees-->
-                <div class="col-sm-3 text-center">
-                    <p class="attendees"><strong>Attendees: </strong></p>{{ booking.number_of_attendees }}
-                </div>
-                <!-- Right Column | Booking Confirmation Status-->
-                    {% if booking.booking_status == 0 %}
-                        <div class="col-sm-3 text-center awaiting-confirmation">
-                            <p><strong><i class="fa-solid fa-circle-exclamation"></i><br>Awaiting<br>Confirmation</strong></p>
-                            <span><a href="{% url 'edit_booking' booking.id %}" class="edit-button" aria-label="edit booking">Edit</a></span>
-                            <span><a href="{% url 'delete_booking' booking.id %}" class="cancel-booking-link btn btn-danger" role="button" aria-label="cancel booking">Cancel Request</a></span>
-                        </div>
-                    {% elif booking.booking_status == 1 %}
-                        <div class="col-sm-3 text-center booking-confirmed">
-                            <p><strong><i class="fa-solid fa-circle-check"></i><br>Booking<br>Confirmed</strong></p>
-                            <span><a href="{% url 'delete_booking' booking.id %}" class="cancel-booking-link btn btn-danger" role="button" aria-label="cancel booking">Cancel Booking</a></span>
-                        </div>
-                    {% else %}
-                    <div class="col-sm-3 text-center booking-declined">
-                        <p><strong><i class="fa-solid fa-circle-xmark"></i></i><br>Booking<br>Declined</strong></p>
-                        <span><a href="{% url 'delete_booking' booking.id %}" class="cancel-booking-link btn btn-danger" role="button" aria-label="delete booking">Delete Request</a></span>
-                    </div>
-                    {% endif %}
-            </div>
-            {% endif %}
-    {% endfor %}
 </div>
 
 {% else %}

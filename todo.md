@@ -6,10 +6,16 @@
 - [ ] mudar frase do hero banner
 - [ ] adicionar parallax na iagem do herobanner
 - [x] adicionar menssagens do bootstrap de validacao 
+- [ ] mudar textos em portugues para ingles
+- [ ] corrigir estilos
+
 
 ### BACKEND
 - [x] formulario do signup
 - [x] formulario de login
-- [ ] formulario de tutor detail
+- [x] formulario de tutor detail
 - [ ] crud booking
-- [ ] adicionar perfil usuario
+- [x] adicionar perfil usuario
+- [ ] formatar perfil do usuario
+- [ ] verificar bug do login (refresh)
+- [ ] verificar mensagens
