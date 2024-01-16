@@ -10,49 +10,44 @@
         <div class="col-md-6">
             <h1 class="profile-heading">Profile Page</h2>
 
-                <div class="container mt-5">
-                    <h2>User Info</h2>
-                    <form method="post" action="{% url 'profile' %}">
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <button class="btn-primary" "submit">Update</button>
-                    </form>
-                </div>
+            <div class="container mt-5">
+                <h2>User Info</h2>
+                <form method="post" action="{% url 'profile' %}">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn-primary" "submit">Update</button>
+                </form>
+            </div>
 
-
-
-
-                <!-- Reservation Block -->
-                <div class="container mt-5">
-                    <h2>Booking Table</h2>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Booking Date</th>
-                                <th>Booking Time</th>
-                                <th>Message</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for booking in bookings %}
-                            <tr>
-                                <td>{{ booking.id }}</td>
-                                <td>{{ booking.booking_date }}</td>
-                                <td>{{ booking.booking_time }}</td>
-                                <td>{{ booking.message }}</td>
-                                <td>
-                                    <a href="{% url 'edit_booking' %}" class="btn btn-primary btn-sm">Edit</a>
-                                    <a href="{% url 'delete_booking' %}" class="btn btn-danger btn-sm">Delete</a>
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-
-
+            <!-- Reservation Block -->
+            <div class="container mt-5">
+                <h2>Booking Table</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Booking Date</th>
+                            <th>Booking Time</th>
+                            <th>Message</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for booking in bookings %}
+                        <tr>
+                            <td>{{ booking.id }}</td>
+                            <td>{{ booking.booking_date }}</td>
+                            <td>{{ booking.booking_time }}</td>
+                            <td>{{ booking.message }}</td>
+                            <td>
+                                <a href="{% url 'edit_booking' %}" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="{% url 'delete_booking' %}" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

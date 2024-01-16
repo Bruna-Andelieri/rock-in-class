@@ -1,11 +1,13 @@
 
 from django.urls import path
+from django.conf.urls import handler404
+
 from .views import (
     page_booking,
     page_index, 
     page_contact, 
     page_about, 
-    page_profile,
+    page_profile
 )
 
 urlpatterns = [
@@ -15,3 +17,5 @@ urlpatterns = [
     path("booking/", page_booking, name="booking"),
     path('profile/', page_profile, name='profile'),
 ]
+
+

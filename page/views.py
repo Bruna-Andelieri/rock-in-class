@@ -45,3 +45,8 @@ def page_profile(request):
 
     return render(request, "profile.html",
                     {"form": form, 'bookings': bookings})
+
+
+
+def error_404(request, exception):
+    return render(request, '404.html')
