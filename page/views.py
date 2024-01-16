@@ -4,10 +4,12 @@ from django.contrib.auth.decorators import login_required
 
 from booking.models import Booking
 from booking.forms import UserForm
+from tutor.models import Tutor
 
 # Create your views here.
 def page_index(request):
-    return render(request, "index.html")
+    tutors = Tutor.objects.all().order_by('-id')[:3]
+    return render(request, "index.html", {"tutors": tutors})
 
 
 def page_contact(request):
