@@ -23,3 +23,8 @@
 - [ ] limpar codigos desnecessarios
 - [ ] adicionar imagem dos tutores
 
+
+
+### checklist
+- [ ] os estilos customizados nao estao carregando
+- [ ] nao esta funcionando os cadastros CSRF forbiden

@@ -1,0 +1,216 @@
+/* Override Bootstrap variables */
+:root {
+  --white: #eaeaea !important;
+  --onyx: #313638 !important;
+  --outerspace: #434a4c !important;
+  --olivine: #7eb77f !important;
+  --schoolbus: #fdd81b !important;
+  --veronica: #9620f1 !important;
+  --font-size: 16px !important;
+  --red: red !important;
+  --green: green !important;
+}
+
+/* Remove all Bootstrap border-radius */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+* {
+  color: var(--white) !important;
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  border: none !important; /* Remove default borders */
+}
+
+i { 
+  color: var(--onyx) !important;
+
+}
+
+
+
+body {
+  background-color: var(--onyx) !important;
+}
+
+header .nav-link, i {
+  font-size: 1.2rem !important;
+  color: var(--onyx) !important;
+}
+
+header .nav-link:hover {
+  text-decoration: underline !important;
+}
+
+header .sigup {
+  background-color: var(--onyx) !important;
+  color: var(--white) !important;
+  border-radius: 10% !important;
+  padding: 7px !important;
+}
+
+/* forms style */
+/* Input field styles */
+form {
+  color: var(--onyx) !important;
+  border: 0 !important;
+}
+
+/* Label styles */
+label {
+  color: var(--onyx) !important; /* Set label text color */
+  font-weight: bold !important; /* Set label font-weight */
+}
+
+/* Checkbox styles */
+form input {
+  margin-top: 3px !important; /* Adjust checkbox alignment */
+}
+
+
+.alert-danger, .error {
+  background-color: var(--red) !important;
+}
+
+.success {
+  background-color: var(--green) !important;
+}
+
+.invalid-feedback > *{
+  color: var(--red) !important;
+}
+
+/* Override specific Bootstrap classes */
+.navbar {
+  background-color: var(--schoolbus) !important;
+  padding: 1rem !important;
+}
+
+.navbar-brand {
+  color: var(--onyx) !important;
+  font-weight: 700 !important;
+}
+
+/* Replace all button colors */
+/* Primary Button */
+.btn-primary {
+  background-color: var(--veronica) !important;
+  border: 0px !important;
+}
+
+/* replace card colors */
+.card {
+  background-color: var(--schoolbus) !important;
+  border: 0 !important;
+  color: var(--onyx) !important;
+}
+
+.card-header {
+  background-color: var(--outerspace) !important;
+  color: var(--onyx) !important;
+}
+
+.card .card-title,
+.card-text,
+.card-body,
+form p {
+  color: var(--onyx) !important;
+}
+
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+  background-color: var(--outerspace) !important; /* Set your desired background color */
+  border: 1px solid var(--onyx) !important;
+  border-radius: 0 !important;
+  color: var(--white) !important;
+  padding: 5px !important;
+  box-sizing: content-box !important;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:hover {
+  background-color: var(--outerspace) !important; /* Set your desired background color */
+  border: 1px solid var(--olivine) !important;
+}
+
+/* Custom styles for the hero banner */
+.hero-banner {
+  position: relative !important;
+  height: 500px !important; /* Adjust height as needed */
+  overflow: hidden !important;
+}
+
+.hero-banner-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.5) !important; /* Adjust opacity (last value) as needed */
+  z-index: 1 !important;
+}
+
+.hero-banner img {
+  width: 100% !important;
+  height: auto !important;
+  z-index: 0 !important;
+}
+
+.hero-banner-content {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2 !important;
+  color: #fff !important;
+  text-align: center !important;
+}
+
+.hero-banner h1 {
+  font-size: 3.5rem !important;
+  margin-bottom: 20px !important;
+}
+
+.hero-banner p {
+  font-size: 1.25rem !important;
+  margin-bottom: 40px !important;
+}
+
+.btn-hero {
+  font-size: 1.5rem !important;
+  padding: 10px 30px !important;
+}
+
+/* booking page */
+.profile-info {
+  margin-bottom: 30px !important;
+}
+.avatar {
+  max-width: 200px !important;
+  border-radius: 50% !important;
+  margin-bottom: 20px !important;
+}
+.booking-form {
+  margin-top: 30px !important;
+}
+
+/* Widescreen media query targeting screens with a minimum width of 1200px */
+@media screen and (min-width: 1200px) {
+  /* Your widescreen-specific CSS styles here */
+  /* For example: */
+  .hero-banner {
+    min-height: 37.5rem !important;
+  }
+}
