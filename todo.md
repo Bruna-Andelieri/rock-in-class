@@ -21,3 +21,5 @@
 - [ ] verificar mensagens de validacao
 - [ ] refatorar os apps
 - [ ] limpar codigos desnecessarios
+- [ ] adicionar imagem dos tutores
+

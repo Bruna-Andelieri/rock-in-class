@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+
 
 {% block content %}
 
@@ -41,7 +41,7 @@
               <h3>Book a Session</h3>
               <form class="login text-center" method="POST" action="{% url 'tutor_detail' tutor_id %}">
                 {% csrf_token %}
-                {{form|crispy}}
+                {{form}}
                 <button type="submit" class="btn btn-primary">Book Now</button>
               </form>
             </div>

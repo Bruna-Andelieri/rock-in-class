@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
+
 
 
 {% block content %}
@@ -14,7 +14,7 @@
                 <h2>User Info</h2>
                 <form method="post" action="{% url 'profile' %}">
                     {% csrf_token %}
-                    {{ form|crispy }}
+                    {{ form }}
                     <button class="btn-primary" "submit">Update</button>
                 </form>
             </div>

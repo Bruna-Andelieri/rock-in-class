@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+
 
 {% block content %}
     <!-- Hero -->
@@ -19,7 +19,7 @@
                   <a href="{% url 'register' %}">sign up</a> first.
                 </p>
               
-                {{form|crispy}}
+                {{form}}
 
                
                 <button type="submit" class="btn btn-primary btn-block">

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
+
 
 {% block content %}
 
@@ -18,7 +18,7 @@
                   If you already have created an account, then please
                   <a href="{% url 'auth' %}">sign in</a> first.
                 </p>
-                {{form|crispy}}
+                {{form}}
 
                
                 <button type="submit" class="btn btn-primary btn-block">

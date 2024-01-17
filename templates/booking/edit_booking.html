@@ -1,5 +1,5 @@
 {% extends '../base.html' %}
-{% load crispy_forms_tags %}
+
 
 
 {% block content %}
@@ -15,7 +15,7 @@
             <form action="{% url 'edit_booking' booking_id %}" method="post" autocomplete="off">
               {% csrf_token %}
              
-              {{form|crispy}}
+              {{form}}
 
               <button type="submit" class="btn btn-primary btn-block">
                 Update
