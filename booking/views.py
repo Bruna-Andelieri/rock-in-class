@@ -1,14 +1,27 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import BookingForm
+from .forms import BookingForm, DeleteBookingForm
 from .models import Booking
 
 # Create your views here.
 
 @login_required
-def delete_booking(request):
-    return render(request, "index.html")
+def delete_booking(request, booking_id):
+    # get booking object
+    booking = get_object_or_404(Booking, pk=booking_id)
+
+    if request.method == 'POST':
+        form = DeleteBookingForm(request.POST)
+        if form.is_valid() and form.cleaned_data['delete']:
+            booking.delete()
+            return redirect('profile')  # Redirecione para onde desejar após a exclusão
+    else:
+        form = DeleteBookingForm()
+
+    return render(request, 'booking/delete_booking.html', {'form': form, 'booking_id': booking_id})
+
+    
 
 
 @login_required

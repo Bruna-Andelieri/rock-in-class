@@ -30,3 +30,12 @@ class UserForm(UserChangeForm):
     class Meta:
         model = User
         fields = ['username', 'email']
+
+
+class DeleteBookingForm(forms.Form):
+    delete = forms.BooleanField(
+        required=True,
+        widget=forms.HiddenInput,
+        initial=True,
+        label='Are you sure?'
+    )

@@ -14,8 +14,10 @@
 - [x] formulario do signup
 - [x] formulario de login
 - [x] formulario de tutor detail
-- [ ] crud booking
+- [x] crud booking
 - [x] adicionar perfil usuario
-- [ ] formatar perfil do usuario
-- [ ] verificar bug do login (refresh)
-- [ ] verificar mensagens
+- [x] formatar perfil do usuario
+- [x] verificar bug do login (refresh)
+- [ ] verificar mensagens de validacao
+- [ ] refatorar os apps
+- [ ] limpar codigos desnecessarios
