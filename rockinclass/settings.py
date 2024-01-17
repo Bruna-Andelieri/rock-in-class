@@ -16,20 +16,20 @@ if os.path.isfile('env.py'):
      import env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "=_)%0gzg=9fbe7ltv%a80*b0sa!yyjd5pb@xe7&ryd((3!*w2*"
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
 
-ALLOWED_HOSTS = ["rock-in-class-324f436b36b0.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["rock-in-class-324f436b36b0.herokuapp.com", "localhost", '127.0.0.1']
 
 
 # Application definition
@@ -73,7 +73,7 @@ ROOT_URLCONF = "rockinclass.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"],
+        "DIRS": [TEMPLATES_DIR],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -131,6 +131,8 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
@@ -138,8 +140,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
