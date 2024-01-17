@@ -25,11 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "=_)%0gzg=9fbe7ltv%a80*b0sa!yyjd5pb@xe7&ryd((3!*w2*"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
 
-ALLOWED_HOSTS = ["rock-in-class-324f436b36b0.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["rock-in-class-324f436b36b0.herokuapp.com", "localhost"]
 
 
 # Application definition
