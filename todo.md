@@ -1,6 +1,6 @@
 ### FRONTEND
 - [x] mudar o logo
-- [ ] arredondar botoes da barra de navegacao
+- [x] arredondar botoes da barra de navegacao
 - [x] adicionar campo password e nome no signup
 - [x] adicionar frase para alterar de signup para login
 - [ ] mudar frase do hero banner
@@ -8,7 +8,8 @@
 - [x] adicionar menssagens do bootstrap de validacao 
 - [ ] mudar textos em portugues para ingles
 - [ ] corrigir estilos
-- [ ] scroll down apos cliclar no menu
+- [x] scroll down apos cliclar no menu
+- [ ] arrumar as cores das badges do arquivo tutor_detail 
 
 
 ### BACKEND

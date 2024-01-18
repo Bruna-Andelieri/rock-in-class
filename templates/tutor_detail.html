@@ -21,7 +21,13 @@
               <p>
                 {{ tutor.description }}
               </p>
-              <p><strong>Music Style:</strong> {{ tutor.music_styles.name }}</p>
+              <p>
+                <strong>Music Style:</strong> 
+                <span
+                class="badge badge-danger px-3 rounded-pill font-weight-normal"
+                >{{ tutor.music_styles.name }}</span
+              >
+              </p>
               <p>
                 <strong>Instrument:</strong>
                 <span

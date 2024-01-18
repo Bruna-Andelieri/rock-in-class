@@ -15,7 +15,7 @@
             <p class="text-center">Are you sure?</p>
             <form method="post" action="{% url 'delete_booking' booking_id %}">
                 {% csrf_token %}
-                {{ form }}
+                {{ form.as_p }}
                 
                 
               <button type="submit" class="btn btn-primary btn-block">

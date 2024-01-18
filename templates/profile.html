@@ -14,7 +14,7 @@
                 <h2>User Info</h2>
                 <form method="post" action="{% url 'profile' %}">
                     {% csrf_token %}
-                    {{ form }}
+                    {{ form.as_p }}
                     <button class="btn-primary" "submit">Update</button>
                 </form>
             </div>

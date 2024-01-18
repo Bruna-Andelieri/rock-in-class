@@ -41,6 +41,12 @@ body {
   background-color: var(--onyx) !important;
 }
 
+header .nav-link {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+
 header .nav-link, i {
   font-size: 1.2rem !important;
   color: var(--onyx) !important;
@@ -48,12 +54,14 @@ header .nav-link, i {
 
 header .nav-link:hover {
   text-decoration: underline !important;
+  background-color: var(--onyx) !important;
+  color: var(--white) !important;
+  text-decoration: none !important;
 }
 
 header .sigup {
   background-color: var(--onyx) !important;
   color: var(--white) !important;
-  border-radius: 10% !important;
   padding: 7px !important;
 }
 
@@ -65,14 +73,44 @@ form {
 }
 
 /* Label styles */
-label {
-  color: var(--onyx) !important; /* Set label text color */
+label, p {
+  color: var(--onyx) !important;
+  /* color: var(--white) !important; */
   font-weight: bold !important; /* Set label font-weight */
 }
+
+
+.card-body, .hero-banner p {
+  color: var(--white) !important;
+}
+
+.card-body ul li {
+  color: var(--olivine) !important;
+}
+
+.card-body a {
+  color: var(--veronica) !important;
+}
+
 
 /* Checkbox styles */
 form input {
   margin-top: 3px !important; /* Adjust checkbox alignment */
+}
+
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+th, td {
+  border: 1px solid var(--outerspace) !important;
+  padding: 8px !important;
+  text-align: left !important;
+}
+
+th {
+  background-color: var(--outerspace);
 }
 
 
@@ -101,14 +139,16 @@ form input {
 
 /* Replace all button colors */
 /* Primary Button */
-.btn-primary {
+button, .btn-primary, .primaryAction  {
   background-color: var(--veronica) !important;
   border: 0px !important;
 }
 
+
+
 /* replace card colors */
 .card {
-  background-color: var(--schoolbus) !important;
+  /* background-color: var(--schoolbus) !important; */
   border: 0 !important;
   color: var(--onyx) !important;
 }
@@ -126,12 +166,26 @@ form p {
 }
 
 
+/* Estilo para campo de e-mail preenchido automaticamente no Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  background-color: var(--outerspace) !important; /* Altere para a cor desejada */
+  color: var(--white) !important;
+}
 
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
+form input[type="date"],
+input[type=datetime-local], input[type=month], input[type=time]
 form textarea,
-form select {
+form select,
+input#id_login,
+input#id_password,
+#id_message {
   background-color: var(--outerspace) !important; /* Set your desired background color */
   border: 1px solid var(--onyx) !important;
   border-radius: 0 !important;
@@ -143,10 +197,23 @@ form select {
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="password"]:focus,
+form input[type="date"]:focus,
 form textarea:focus,
-form select:hover {
+form select:focus,
+input#id_login:focus,
+input#id_password:focus,
+#id_message:focus {
   background-color: var(--outerspace) !important; /* Set your desired background color */
   border: 1px solid var(--olivine) !important;
+}
+
+
+#id_message {
+  width: 100% !important;
+  min-height: 180px !important;
+  vertical-align: top  !important;
+  text-align: left  !important; 
+  padding: 5px !important; 
 }
 
 /* Custom styles for the hero banner */
