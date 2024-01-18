@@ -26,6 +26,10 @@
   border: none !important; /* Remove default borders */
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 i { 
   color: var(--onyx) !important;
 
