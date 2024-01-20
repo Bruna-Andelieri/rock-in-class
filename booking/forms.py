@@ -1,17 +1,34 @@
+from datetime import datetime
+
 from django import forms
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
 
 from .models import Booking
 
-
+TIME_OPTIONS = [(f"{hour}:00", f"{hour}:00") for hour in range(9, 18)]
+CHOICES = (
+      (1, 'Orange'),
+      (2, 'Mango'),
+      (3, 'Strawberries'),
+      (4, 'Grapes'),
+      
+  )
 class BookingForm(forms.ModelForm):
+
+    booking_time = forms.ChoiceField(
+        choices=TIME_OPTIONS,
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'})
+    )
+
+
     class Meta:
         model = Booking
         fields = ['booking_date', 'booking_time', 'message']
         widgets = {
-            'booking_date': forms.DateInput(attrs={'type': 'date'}),
-            'booking_time': forms.Select(choices=[(f"{hour}:00", f"{hour}:00") for hour in range(9, 18)]),
+            'booking_date': forms.DateInput(attrs={'class':'datepicker', 'value': datetime.now().strftime("%d/%m/%Y")}),
+            'booking_time': forms.Select(choices=TIME_OPTIONS),
             'message': forms.Textarea(attrs={'placeholder': 'Message here...'}),
             'student': forms.HiddenInput(),
             'tutor': forms.HiddenInput(),
@@ -21,7 +38,7 @@ class BookingForm(forms.ModelForm):
             "booking_time": "Time",
             "message": "Message"
         }
-
+  
 
 
 # forms.py
