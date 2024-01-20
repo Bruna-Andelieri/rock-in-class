@@ -5,64 +5,85 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
 
-            <div class="card">
-                <div class="card-header">
-                    <h3 class="profile-heading">Profile Page</h3>
+<h3 class="profile-heading text-center">Profile Page</h3>
+
+<div class="form-content">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <form class="login col-md-6 mx-auto" action="{% url 'profile' %}">
+                {% csrf_token %}
+
+                <!-- Personalizando o campo username com Bootstrap -->
+                <div class="form-group">
+                    <label for="{{ form.username.id_for_label }}">Username:</label>
+                    <input type="text" class="form-control" id="{{ form.username.id_for_label }}"
+                        name="{{ form.username.name }}" value="{{ form.username.value }}" required>
                 </div>
 
-                <div class="card-body">
-                    <div class="container mt-5">
-                        <form method="post" action="{% url 'profile' %}">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button class="btn-primary" "submit">Update</button>
-                        </form>
-                    </div>
 
+                <div class="form-group">
+                    <label for="{{ form.email.id_for_label }}">Email:</label>
+                    <input type="email" class="form-control" id="{{ form.email.id_for_label }}"
+                        name="{{ form.email.name }}" value="{{ form.email.value }}" required>
                 </div>
-            </div>
 
+                <div class="form-group">
+                    <label for="{{ form.password1.id_for_label }}">Password:</label>
+                    <input type="password" class="form-control" id="{{ form.password1.id_for_label }}"
+                        name="{{ form.password1.name }}" required>
+                </div>
 
+                <div class="form-group">
+                    <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+                    <input type="password" class="form-control" id="{{ form.password2.id_for_label }}"
+                        name="{{ form.password2.name }}" required>
+                </div>
 
-
-
-            <!-- Reservation Block -->
-            <div class="container mt-5">
-                <h2>Booking Table</h2>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Booking Date</th>
-                            <th>Booking Time</th>
-                            <th>Message</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for booking in bookings %}
-                        <tr>
-                            <td>{{ booking.id }}</td>
-                            <td>{{ booking.booking_date }}</td>
-                            <td>{{ booking.booking_time }}</td>
-                            <td>{{ booking.message }}</td>
-                            <td>
-                                <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm">Edit</a>
-                                <a href="{% url 'delete_booking' booking.id  %}"
-                                    class="btn btn-danger btn-sm">Delete</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Update</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
+
+
+<div class="form-content">
+    <div class="container mt-5 text-center">
+        <h4 class="py-3">Booking Table</h4>
+        <div class="row justify-content-center">
+            <table class="table table-dark scol-md-6 mx-auto">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Booking Date</th>
+                        <th>Booking Time</th>
+                        <th>Message</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in bookings %}
+                    <tr>
+                        <td>{{ booking.id }}</td>
+                        <td>{{ booking.booking_date }}</td>
+                        <td>{{ booking.booking_time }}</td>
+                        <td>{{ booking.message }}</td>
+                        <td>
+                            <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{% url 'delete_booking' booking.id  %}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
 
 {% else %}
 <h3 class="text-center">Please login or sign up to an account to be able to see your Profile Page</h3>
