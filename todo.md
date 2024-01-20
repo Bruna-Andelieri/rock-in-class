@@ -7,9 +7,9 @@
 - [x] adicionar menssagens do bootstrap de validacao 
 - [x] corrigir estilos
 - [x] scroll down apos cliclar no menu
+- [x] alterar o nome do site na tab
+- [x] alterar favicon
 - [ ] mudar textos em portugues para ingles
-- [ ] alterar favicon
-- [ ] alterar o nome do site na tab
 - [ ] mudar frase do hero banner
 - [ ] adicionar parallax na imagem do herobanner
 
@@ -23,12 +23,12 @@
 - [x] adicionar perfil usuario
 - [x] formatar perfil do usuario
 - [x] verificar bug do login (refresh)
+- [x] adicionar imagem dos tutores
+- [ ] corrigir link the alteracao de senha
 - [ ] verificar mensagens de validacao
 - [ ] refatorar os apps
 - [ ] limpar codigos desnecessarios
-- [ ] adicionar imagem dos tutores
-- [ ] corrigir link the alteracao de senha
-- [ ]
+- [ ] adicionar dev flag
 
 
 

@@ -3,16 +3,21 @@
 
 {% block content %}
 
+    <section class="pt-5 pb-5 text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Who They Are?</h1>
+        
+      </div>
+    </section>
+
+
     <div class="container mt-5">
       <div class="container text-center">
-        <h1>Who They Are?</h1>
-
         <div class="row">
           <div class="col text-center">
             <!-- Tutor Information -->
             <div class="profile-info">
               <img
-                onerror="this.onerror=null; this.src='../../static/images/placeholder.jpg'"
                 src="{{ tutor.avatar_image }}"
                 alt="{{ tutor.name }}"
                 class="avatar"

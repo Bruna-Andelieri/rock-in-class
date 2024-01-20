@@ -17,7 +17,7 @@ class Tutor(models.Model):
     name =  models.CharField(max_length=200)
     email =  models.CharField(max_length=200, unique=True)
     description = models.TextField()
-    avatar_image = CloudinaryField('image', default='placeholder')
+    avatar_image = CloudinaryField('image', default='https://res.cloudinary.com/difmdvoze/image/upload/v1705534784/static/images/placeholder.jpg')
     instrument = models.ForeignKey(Instrument, on_delete=models.CASCADE)
     music_styles = models.ForeignKey(MusicStyle, on_delete=models.CASCADE)
     updated_on = models.DateTimeField(auto_now=True)
