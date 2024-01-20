@@ -3,13 +3,16 @@
 - [x] arredondar botoes da barra de navegacao
 - [x] adicionar campo password e nome no signup
 - [x] adicionar frase para alterar de signup para login
-- [ ] mudar frase do hero banner
-- [ ] adicionar parallax na iagem do herobanner
+- [x] arrumar as cores das badges do arquivo tutor_detail 
 - [x] adicionar menssagens do bootstrap de validacao 
-- [ ] mudar textos em portugues para ingles
-- [ ] corrigir estilos
+- [x] corrigir estilos
 - [x] scroll down apos cliclar no menu
-- [ ] arrumar as cores das badges do arquivo tutor_detail 
+- [ ] mudar textos em portugues para ingles
+- [ ] alterar favicon
+- [ ] alterar o nome do site na tab
+- [ ] mudar frase do hero banner
+- [ ] adicionar parallax na imagem do herobanner
+
 
 
 ### BACKEND
@@ -24,15 +27,16 @@
 - [ ] refatorar os apps
 - [ ] limpar codigos desnecessarios
 - [ ] adicionar imagem dos tutores
+- [ ] corrigir link the alteracao de senha
+- [ ]
 
 
 
 ### checklist
-- [ ] os estilos customizados nao estao carregando
-- [ ] nao esta funcionando os cadastros CSRF forbiden
-- [ ] debug False, collect_static 1 on heroku
-- [ ] reinstalar google chrome (salvar senha antes)
-- [ ] instalar um app bitwarden gerenciador de senha.
+- [ ] os estilos customizados nao estao carregando por causa do Debug on
+- [ ] nao esta funcionando os cadastros CSRF forbiden versoes diferente do python
+- [x] reinstalar google chrome (salvar senha antes)
+- [x] instalar um app bitwarden gerenciador de senha.
 - [ ] passar os aprendizados pra dentro do Joplin, pasta django em markdown.
 
 aprendizados:
