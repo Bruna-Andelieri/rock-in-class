@@ -8,6 +8,7 @@
   --font-size: 16px !important;
   --red: red !important;
   --green: green !important;
+  --nav-height: 10vh !important;
 }
 
 /* Remove all Bootstrap border-radius */
@@ -18,6 +19,7 @@
   -moz-box-sizing: border-box !important;
   -webkit-box-sizing: border-box !important;
   border: none !important;
+  border-radius: 0 !important;
 }
 
 html {
@@ -34,9 +36,19 @@ body {
   color: var(--white) !important;
 }
 
+.btn-primary  {
+  background-color: var(--english-violet) !important;
+}
+
+.alert {
+  margin: 0;
+  text-align: center !important;
+}
+
 
 /* CUSTOM NAVBAR */
 .navbar {
+  min-height: var(--nav-height) !important;
   color: var(--onyx) !important;
   font-weight: 500 !important;
   background-color: var(--orange) !important;
@@ -67,11 +79,28 @@ body {
   color: var(--white) !important; 
 }
 
+/* hanburger menu */
+ /* Adicione este bloco de estilo ao seu arquivo de folha de estilos CSS personalizado */
+ .navbar-toggler-icon {
+  color: var(--onyx) !important;
+  transition: filter 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.navbar-toggler-icon i{
+  margin-top: 5px;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  color: var(--english-violet) !important;
+}
+
 /* Custom styles for the hero banner */
 .hero-banner {
   position: relative !important;
-  height: 500px !important; /* Adjust height as needed */
+  max-height: calc(100vh - var(--nav-height)) !important; /* Adjust height as needed */
   overflow: hidden !important;
+  border-bottom: 5px solid var(--orange) !important;
+  
 }
 
 .hero-banner img {
@@ -111,12 +140,10 @@ body {
   text-align: center !important;
 }
 
-
 .hero-banner .btn-hero {
   background-color: var(--english-violet) !important;
   font-size: 1.5rem !important;
   padding: 10px 30px !important;
-  border-radius: 0;
 }
 
 .hero-banner .btn-hero:hover {
@@ -128,8 +155,7 @@ body {
   margin-bottom: 30px !important;
 }
 .avatar {
-  max-width: 200px !important;
-  border-radius: 50% !important;
+  max-width: 400px !important;
   margin-bottom: 20px !important;
 }
 
@@ -159,17 +185,26 @@ body {
 .nav-footer .nav-item .nav-link:hover {
   color: var(--english-violet) !important;
 }
+
+/* CUSTOM CONTENT */
 .content {
-  padding:50px 0px;
+  padding:50px 0px !important;
 }
 
+/* CUSTOM FORM */
+.form-content .password-help-text{
+  color: var(--orange) !important;
+}
 
-
-
-
-
-
-
+.form-content ul {
+  list-style: none;
+}
+.form-content ul li::before {
+  padding-right: 10px;
+  content: "\f04b" !important;
+  font-family: 'Font Awesome 5 Free' !important; /* Especifique a família de fontes do FontAwesome */
+  font-weight: 600 !important; 
+}
 
 
 

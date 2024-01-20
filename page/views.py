@@ -22,7 +22,6 @@ def page_booking(request):
     return render(request, "booking.html")
 
 
-
 @login_required
 def page_profile(request):
     """

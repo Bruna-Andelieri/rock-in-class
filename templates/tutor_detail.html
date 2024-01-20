@@ -6,68 +6,111 @@
     <section class="pt-5 pb-5 text-center">
       <div class="container">
         <h1 class="jumbotron-heading">Who They Are?</h1>
-        
+        <div class="container mt-5">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col text-center">
+    
+                <!-- Tutor Information -->
+                <div class="profile-info">
+                  <h3>{{ tutor.name }}</h3>
+                  <img
+                    src="{{ tutor.avatar_image }}"
+                    alt="{{ tutor.name }}"
+                    class="avatar"
+                  />
+                  <p>
+                    {{ tutor.description }}
+                  </p>
+                  <p>
+                    <strong>Music Style:</strong> 
+                    <span
+                    class="badge badge-danger px-3 rounded-pill font-weight-normal"
+                    style="background-color: #{{ tutor.music_styles.color }} !important;"
+                    >{{ tutor.music_styles.name }}</span
+                  >
+                  </p>
+                  <p>
+                    <strong>Instrument:</strong>
+                    <span
+                      class="badge badge-danger px-3 rounded-pill font-weight-normal"
+                      style="background-color: #{{ tutor.instrument.color }} !important;"
+                      >{{ tutor.instrument.name }}</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+    
+            {% if user.is_authenticated %}
+            <div class="form-content">
+              <div class="container mt-5">
+               <div class="row justify-content-center">
+                 <form class="login col-md-6 mx-auto" method="POST" action="{% url 'tutor_detail' tutor_id %}">
+                   {% csrf_token %}
+             
+                   <div class="mb-3">
+                     <label for="{{ form.booking_date.id_for_label }}" class="form-label">Date:</label>
+                     <input type="date" name="{{ form.booking_date.name }}" id="{{ form.booking_date.id_for_label }}" class="form-control"
+                       placeholder="Booking date">
+                   </div>
+
+                   <div class="mb-3">
+                    <label for="{{ form.booking_time.id_for_label }}" class="form-label">Time:</label>
+                    <input type="text" name="{{ form.booking_time.name }}" id="{{ form.booking_time.id_for_label }}" class="form-control"
+                      placeholder="Booking date">
+                    
+                      <div class="mb-3">
+                    <!-- Renderiza o campo select no template -->
+                    {{ form.escolha.label_tag }}
+                    {{ form.escolha }}
+                  </div>
+
+
+                    <div class="mb-3">
+                      <label for="{{ form.booking_time.id_for_label }}" class="form-label">{{ form.booking_time.label }}</label>
+                      <select name="{{ form.booking_time.name }}" id="{{ form.booking_time.id_for_label }}" class="form-select">
+                        {% for value, label in form.booking_time.choices %}
+                        <option value="{{ value }}" {% if value == form.booking_time.value %}selected{% else %}{% endif %}>{{ label }}</option>
+
+                        {% endfor %}
+                      </select>
+                    </div>
+
+
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="{{ form.message.id_for_label }}" class="form-label">Message:</label>
+                    <textarea  rows="10" type="text" name="{{ form.message.name }}" id="{{ form.message.id_for_label }}" class="form-control"
+                      placeholder="Booking date"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Book Now</button>
+                 </form>
+               </div>
+              </div>
+            </div>
+
+
+
+
+            <!-- Booking Component -->
+    
+          </div>
+        </div>
+        {% else %}
+        <p>
+          <form class="login text-center" method="POST" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            <button  type="submit" class="btn btn-primary">sign in first</button>
+          </form>
+        {% endif %}
       </div>
     </section>
 
 
-    <div class="container mt-5">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col text-center">
-            <!-- Tutor Information -->
-            <div class="profile-info">
-              <img
-                src="{{ tutor.avatar_image }}"
-                alt="{{ tutor.name }}"
-                class="avatar"
-              />
-              <h3>{{ tutor.name }}</h3>
-              <p>
-                {{ tutor.description }}
-              </p>
-              <p>
-                <strong>Music Style:</strong> 
-                <span
-                class="badge badge-danger px-3 rounded-pill font-weight-normal"
-                style="background-color: #{{ tutor.music_styles.color }} !important;"
-                >{{ tutor.music_styles.name }}</span
-              >
-              </p>
-              <p>
-                <strong>Instrument:</strong>
-                <span
-                  class="badge badge-danger px-3 rounded-pill font-weight-normal"
-                  style="background-color: #{{ tutor.instrument.color }} !important;"
-                  >{{ tutor.instrument.name }}</span
-                >
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {% if user.is_authenticated %}
-        <!-- Booking Component -->
-        <div class="col">
-          <div class="col">
-            <div class="booking-form">
-              <h3>Book a Session</h3>
-              <form class="login text-center" method="POST" action="{% url 'tutor_detail' tutor_id %}">
-                {% csrf_token %}
-                {{form}}
-                <button type="submit" class="btn btn-primary">Book Now</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% else %}
-    <p>
-      <form class="login text-center" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        <button  type="submit" class="btn btn-primary">sign in first</button>
-      </form>
-    {% endif %}
+
 
     {% endblock content %}
