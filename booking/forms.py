@@ -17,32 +17,30 @@ CHOICES = (
 class BookingForm(forms.ModelForm):
 
     booking_time = forms.ChoiceField(
-        choices=TIME_OPTIONS,
         required=True,
+        choices=TIME_OPTIONS,
         widget=forms.Select(attrs={'class': 'form-control'})
     )
 
     booking_date = forms.DateField(
         required=True,
-        widget=forms.TextInput(attrs={'class': 'form-control', 'id': 'id_booking_date'}),
-        input_formats=['yyyy-mm-dd']
-    )
+        widget=forms.DateInput(attrs={'class': 'form-control datepicker', 'type': 'date'}),)
 
+    message = forms.CharField(
+        required=False, 
+        widget=forms.Textarea(attrs={
+            "rows":"3", 
+            'class': 'form-control', 
+            'placeholder': 'Message here...'}))
 
     class Meta:
         model = Booking
         fields = ['booking_date', 'booking_time', 'message']
         widgets = {
-            'booking_date': forms.DateInput(attrs={
-                'type': 'date', 
-                'class':'datepicker', 
-                'value': datetime.now().strftime("yyyy-mm-dd")
-            }),
-            'booking_time': forms.Select(choices=TIME_OPTIONS),
-            'message': forms.Textarea(attrs={'placeholder': 'Message here...'}),
             'student': forms.HiddenInput(),
             'tutor': forms.HiddenInput(),
         }
+        
         labels = {
             "booking_date": "Date",
             "booking_time": "Time",
