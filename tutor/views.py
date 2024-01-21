@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib import messages
 
 from tutor.models import Tutor
@@ -16,14 +16,11 @@ def tutor_list(request):
 def tutor_detail(request, tutor_id):
  
     form = BookingForm()
-    tutor = Tutor.objects.filter(id=tutor_id).first()  
+    tutor =  get_object_or_404(Tutor, id=tutor_id)
 
-    # format date to datepicker
-    current_date = datetime.now().strftime('%Y-%m-%d')
 
     return render(request, "tutor/tutor_detail.html", {
         "form": form,
         "tutor": tutor, 
         "tutor_id": tutor_id, 
-        "current_date": current_date 
     })

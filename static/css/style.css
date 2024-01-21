@@ -6,8 +6,8 @@
   --orange: #fca311 !important;
   --english-violet: #563D7C !important;
   --font-size: 16px !important;
-  --red: red !important;
-  --green: green !important;
+  --red: rgb(245, 146, 146) !important;
+  --green: rgb(107, 177, 107) !important;
   --nav-height: 10vh !important;
 }
 
@@ -63,6 +63,11 @@ body {
 .alert {
   margin: 0;
   text-align: center !important;
+}
+
+.errorlist {
+  padding: 20px !important;
+  color: var(--red) !important;
 }
 
 
