@@ -1,9 +1,52 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
+{% load i18n %}
+
+{% block head_title %}{% trans "About" %}{% endblock %}
 
 {% block content %}
+<div class="container mt-5">
+<h1 class="text-center">{% trans "About" %}</h1>
+<p class="text-center">
+    Welcome to <strong>Rock in Class</strong>, where the world of music meets the convenience of 
+    your screen! Our online music school is a vibrant and innovative platform 
+    dedicated to nurturing your musical talents from the comfort of your own home.
+</p>
+</div>
+
+<div class="container mt-5">
+<h1 class="text-center">{% trans "Contact" %}</h1>
+<p class="text-center"> info@rockinclass.com</p>
+<h2 class="text-center">{% trans 'Follow us' %}</h2>
+</div>
 
 
-<h3>TODO</h3>
+<div class="container">
+    <ul class="list-unstyled social-icons">
+      <li class="mr-3">
+        <a href="www.youtube.com">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </li>
+      <li class="mr-3">
+        <a href="www.instagram.com">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </li>
+      <li class="mr-3">
+        <a href="www.twitter.com">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="www.facebook.com">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-{% endblock content %}
+
+
+{% endblock %}

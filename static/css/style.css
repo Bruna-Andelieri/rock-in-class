@@ -242,10 +242,26 @@ body {
 }
 
 
-
 .booking-form {
   margin-top: 30px !important;
 }
+
+/* about page */
+ /* Estilo adicional para centralizar a lista horizontalmente */
+ .social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo para ajustar o tamanho dos ícones */
+.social-icons i {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  color: var(--white);
+}
+
+
 
 /* Widescreen media query targeting screens with a minimum width of 1200px */
 @media screen and (min-width: 1200px) {

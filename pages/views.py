@@ -12,9 +12,6 @@ def page_index(request):
     return render(request, "pages/index.html", {"tutors": tutors})
 
 
-def page_contact(request):
-    return render(request, "pages/contact.html")
-
 def page_about(request):
     return render(request, "pages/about.html")
 
