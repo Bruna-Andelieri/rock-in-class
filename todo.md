@@ -9,9 +9,9 @@
 - [x] scroll down apos cliclar no menu
 - [x] alterar o nome do site na tab
 - [x] alterar favicon
+- [x] adicionar parallax na imagem do herobanner
 - [ ] mudar textos em portugues para ingles
 - [ ] mudar frase do hero banner
-- [ ] adicionar parallax na imagem do herobanner
 
 
 
@@ -24,17 +24,19 @@
 - [x] formatar perfil do usuario
 - [x] verificar bug do login (refresh)
 - [x] adicionar imagem dos tutores
-- [ ] corrigir link the alteracao de senha
-- [ ] verificar mensagens de validacao
+- [x] corrigir link the alteracao de senha
+- [x] verificar mensagens de validacao
 - [ ] refatorar os apps
 - [ ] limpar codigos desnecessarios
 - [ ] adicionar dev flag
+- [ ] criar os textos do banner, about, contato, tutor
+- [ ] completar cadastro dos tutores e adicionar imagens
 
 
 
 ### checklist
-- [ ] os estilos customizados nao estao carregando por causa do Debug on
-- [ ] nao esta funcionando os cadastros CSRF forbiden versoes diferente do python
+- [x] os estilos customizados nao estao carregando por causa do Debug on
+- [x] nao esta funcionando os cadastros CSRF forbiden versoes diferente do python
 - [x] reinstalar google chrome (salvar senha antes)
 - [x] instalar um app bitwarden gerenciador de senha.
 - [ ] passar os aprendizados pra dentro do Joplin, pasta django em markdown.
