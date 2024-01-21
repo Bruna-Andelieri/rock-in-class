@@ -1,3 +1,4 @@
+from urllib import request
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -10,4 +11,4 @@ class Booking(models.Model):
     tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE, related_name="booking_tutor")
     booking_date = models.DateField(null=False, blank=False)
     booking_time = models.CharField(null=False, blank=False, max_length=5)
-    message =  models.CharField(max_length=200, unique=True)
+    message =  models.CharField(null=True, max_length=200)

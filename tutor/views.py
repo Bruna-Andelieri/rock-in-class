@@ -25,15 +25,20 @@ def tutor_detail(request, tutor_id):
             tutor = Tutor.objects.get(pk=tutor_id)
             form.instance.tutor = tutor
 
-            # TODO: melhorar validacao
+            current_date = datetime.now().date()
+            current_time = datetime.now().time()
+  
+            if booking_date <= current_date and booking_time <= current_time:
+                messages.error(request, 'Booking should be greather than today')
+        
+            # check if tutor has booking
             booking = Booking.objects.filter(tutor_id=tutor_id, booking_date=booking_date, booking_time=booking_time).first()
-
             if booking:
-                messages.error(request, 'Este tutor ja tem agendado este horario.')
+                messages.error(request, 'This tutor already have schendule on this date/time')
 
             else:
                 form.save()
-                messages.success(request, 'Seu booking foi agendado com sucesso.')
+                messages.success(request, 'Booking scheduled successfuly')
                 return redirect('index')
             
     else:
@@ -41,7 +46,7 @@ def tutor_detail(request, tutor_id):
 
     tutor = Tutor.objects.filter(id=tutor_id).first()  
 
-    # format data to datepicker
+    # format date to datepicker
     current_date = datetime.now().strftime('%Y-%m-%d')
 
     return render(request, "tutor/tutor_detail.html", {

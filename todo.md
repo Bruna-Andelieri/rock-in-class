@@ -26,11 +26,12 @@
 - [x] adicionar imagem dos tutores
 - [x] corrigir link the alteracao de senha
 - [x] verificar mensagens de validacao
-- [ ] refatorar os apps
-- [ ] limpar codigos desnecessarios
+- [x] refatorar os apps
+- [x] limpar codigos desnecessarios
 - [ ] adicionar dev flag
 - [ ] criar os textos do banner, about, contato, tutor
 - [ ] completar cadastro dos tutores e adicionar imagens
+- [ ] adicionar validacao
 
 
 
