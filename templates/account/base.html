@@ -21,6 +21,22 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
+  
+  <style>
+    .parallax {
+      /* The image used */
+      background-image: url("{% static 'images/banner.jpg' %}");
+    
+      /* Set a specific height */
+      min-height: 800px; 
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
 
 </head>
 
@@ -75,7 +91,8 @@
 
     <!-- Hero -->
     <div class="hero-banner">
-      <img src="{% static 'images/banner.jpg' %}" alt="Hero Image" />
+      <div class="parallax"></div>
+      <!-- <img src="{% static 'images/banner.jpg' %}" alt="Hero Image" /> -->
       <div class="hero-banner-overlay"></div>
       <div class="hero-banner-content container">
         <h1>Welcome to Our Website</h1>
@@ -86,7 +103,7 @@
   </header>
 
 
-  <!-- <div  id="scroll"></div> -->
+  <div  id="scroll"></div>
 
   <!-- error form setup -->
   {% if form.errors %}
