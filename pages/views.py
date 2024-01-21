@@ -9,17 +9,14 @@ from tutor.models import Tutor
 # Create your views here.
 def page_index(request):
     tutors = Tutor.objects.all().order_by('-id')[:3]
-    return render(request, "index.html", {"tutors": tutors})
+    return render(request, "pages/index.html", {"tutors": tutors})
 
 
 def page_contact(request):
-    return render(request, "contact.html")
+    return render(request, "pages/contact.html")
 
 def page_about(request):
-    return render(request, "about.html")
-
-def page_booking(request):
-    return render(request, "booking.html")
+    return render(request, "pages/about.html")
 
 
 @login_required
@@ -42,10 +39,9 @@ def page_profile(request):
     else:
         form = UserForm(instance=request.user)
 
-    return render(request, "profile.html",
+    return render(request, "pages/profile.html",
                     {"form": form, 'bookings': bookings})
 
 
-
 def error_404(request, exception):
-    return render(request, '404.html')
+    return render(request, 'pages/404.html')

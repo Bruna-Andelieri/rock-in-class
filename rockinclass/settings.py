@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     "tutor",
     "booking",
-    "page"
+    "pages"
 ]
 
 

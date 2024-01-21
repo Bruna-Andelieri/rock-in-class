@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path("", include("page.urls")),
+    path("", include("pages.urls")),
     path("admin/", admin.site.urls),
     path("booking/", include("booking.urls")),
     path("tutor/", include("tutor.urls")),
@@ -26,5 +26,5 @@ urlpatterns = [
 ]
 
 
-handler404 = "page.views.error_404"
+handler404 = "pages.views.error_404"
 
