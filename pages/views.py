@@ -24,21 +24,20 @@ def page_profile(request):
     """
     renders profile page and requests all bookings
     """
-
-    student = request.user.id
-    bookings = Booking.objects.filter(student=student).all()
-
     if request.method == 'POST':
         formulario = UserForm(request.POST, instance=request.user)
         if formulario.is_valid():
             formulario.save()
-            messages.success(request, 'Dados atualizados com sucesso.')
+            messages.success(request, 'Porfile update successfuly')
             return redirect('profile')
         else: 
-            messages.error(request, 'Erro ao atualizar os dados do usuario.')
+            messages.error(request, 'Failed to update data user.')
     else:
+
         form = UserForm(instance=request.user)
 
+    student = request.user.id
+    bookings = Booking.objects.filter(student=student).all()
     return render(request, "pages/profile.html",
                     {"form": form, 'bookings': bookings})
 

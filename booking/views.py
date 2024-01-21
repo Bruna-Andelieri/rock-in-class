@@ -21,6 +21,7 @@ def delete_booking(request, booking_id):
         form = DeleteBookingForm(request.POST)
         if form.is_valid() and form.cleaned_data['delete']:
             booking.delete()
+            messages.success(request, "Booking deleted successful")
             return redirect('profile')  # Redirecione para onde desejar após a exclusão
     else:
         form = DeleteBookingForm()
@@ -51,11 +52,9 @@ def edit_booking(request, booking_id):
         # create a booking instance
         form = BookingForm(instance=booking)
 
-        # format data to datepicker
-        formatted_date = booking.booking_date.strftime('%Y-%m-%d')
-       
+   
 
-    return render(request, 'booking/edit_booking.html', {'form': form, "booking_id": booking_id, "formatted_date": formatted_date})
+    return render(request, 'booking/edit_booking.html', {'form': form, "booking_id": booking_id})
 
 
 

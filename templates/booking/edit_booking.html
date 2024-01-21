@@ -14,7 +14,7 @@
         <div class="mb-3">          
           <label for="{{ form.booking_date.id_for_label }}" class="form-label">Date:</label>
           <input type="date"  data-provide="datepicker"  data-date-format="yyyy-mm-dd"  name="{{ form.booking_date.name }}" id="{{ form.booking_date.id_for_label }}"
-            class="form-control" value="{{ formatted_date }}" required>
+            class="form-control" value="{{ form.booking_date.value }}" required>
         </div>
 
         <div class="mb-3">

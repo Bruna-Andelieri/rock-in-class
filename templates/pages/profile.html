@@ -11,7 +11,7 @@
 <div class="form-content">
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <form class="login col-md-6 mx-auto" action="{% url 'profile' %}">
+            <form class="login col-md-6 mx-auto" method="POST" action="{% url 'profile' %}">
                 {% csrf_token %}
 
                 <!-- Personalizando o campo username com Bootstrap -->
@@ -64,8 +64,8 @@
                         <td>{{ booking.booking_time }}</td>
                         <td>{{ booking.message }}</td>
                         <td>
-                            <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm">Edit</a>
-                            <a href="{% url 'delete_booking' booking.id  %}" class="btn btn-danger btn-sm">Delete</a>
+                            <a href="{% url 'edit_booking' booking.id %}?scroll=scroll" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="{% url 'delete_booking' booking.id  %}?scroll=scroll" class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                     {% endfor %}
