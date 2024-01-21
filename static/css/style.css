@@ -175,6 +175,16 @@ body {
   background-color: var(--orange) !important;
 }
 
+/* list tutor page */
+.tutor-item img {
+  width: 100% !important;
+  max-height: 180px !important;
+  z-index: 0 !important;
+  overflow-x: auto;
+  object-fit: cover;
+  
+}
+
 /* booking page */
 .profile-info {
   margin-bottom: 30px !important;

@@ -14,6 +14,10 @@ import dj_database_url
 from pathlib import Path
 if os.path.isfile('env.py'):
      import env
+
+import cloudinary.uploader
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     'cloudinary_storage',
+    'cloudinary',
     "tutor",
     "booking",
     "pages"
@@ -148,8 +153,25 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+
+# # Configure Cloudinary using os.environ.get()
+# CLOUDINARY_CLOUD_NAME = os.environ.get('CLOUDINARY_CLOUD_NAME')
+# CLOUDINARY_API_KEY = os.environ.get('CLOUDINARY_API_KEY')
+# CLOUDINARY_API_SECRET = os.environ.get('CLOUDINARY_API_SECRET')
+
+
+# # Configure Cloudinary Storage
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': CLOUDINARY_CLOUD_NAME,
+#     'API_KEY': CLOUDINARY_API_KEY,
+#     'API_SECRET': CLOUDINARY_API_SECRET,
+# }
+
+# Use Cloudinary for media file storage
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
