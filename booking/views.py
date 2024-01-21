@@ -46,7 +46,7 @@ def edit_booking(request, booking_id):
         form = BookingForm(instance=booking)
 
         # format data to datepicker
-        data_formatada = booking.booking_date.strftime('%Y-%m-%d')
+        formatted_date = booking.booking_date.strftime('%Y-%m-%d')
        
 
-    return render(request, 'booking/edit_booking.html', {'form': form, "booking_id": booking_id, "formatted_date": data_formatada})
+    return render(request, 'booking/edit_booking.html', {'form': form, "booking_id": booking_id, "formatted_date": formatted_date})
