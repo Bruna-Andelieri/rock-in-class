@@ -41,7 +41,7 @@
   <div class="container mt-5">
     <h2 class=" text-center">Booking here</h2>
     <div class="row justify-content-center">
-      <form class="login col-md-6 mx-auto" method="POST" action="{% url 'save_booking' tutor_id %}">
+      <form class="login col-md-6 mx-auto" method="POST" action="{% url 'save_booking' tutor_id %}?scroll=scroll">
         {% csrf_token %}
 
         {{ form.as_p }}

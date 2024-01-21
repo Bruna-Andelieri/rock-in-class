@@ -75,8 +75,6 @@ def save_booking(request, tutor_id):
             messages.success(request, "Booking updated successful")
             return redirect('index') 
         
-        else:
-            messages.error(request, "Tutor is not available this day")
     else:
         form = BookingForm()
 
