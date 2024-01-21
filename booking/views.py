@@ -42,7 +42,11 @@ def edit_booking(request, booking_id):
             messages.error(request, "Ops... Something goes wrong")
     else:
 
-        # Criar uma instância do formulário com a instância do objeto existente
+        # create a booking instance
         form = BookingForm(instance=booking)
 
-    return render(request, 'booking/edit_booking.html', {'form': form, "booking_id": booking_id})
+        # format data to datepicker
+        data_formatada = booking.booking_date.strftime('%Y-%m-%d')
+       
+
+    return render(request, 'booking/edit_booking.html', {'form': form, "booking_id": booking_id, "formatted_date": data_formatada})
