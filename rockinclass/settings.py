@@ -179,3 +179,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+SESSION_COOKIE_AGE = 86400
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST = True
