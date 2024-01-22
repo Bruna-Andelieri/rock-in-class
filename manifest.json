@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Rock in class music school",
+    "version": "1.0.0",
+    "description": "Online music class - Rock in class",
+    "icons": [
+      {
+        "src": "static/images/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ]
+  }
+
