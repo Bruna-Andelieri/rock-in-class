@@ -1,6 +1,17 @@
 ### README
 
 - [ ] Database schema?
+- [ ] Flowchart
+- [ UX ](#ux) ok
+- [ User Story and Agile Development](#user-story-and-agile) ok
+- [ Features ](#features)  
+- [ Technology used ](#technology-used)ok
+- [ Testing ](#testing)  
+- [ Bugs ](#bugs)  
+- [ Deployment](#deployment) doing
+- [ Credits](#credits)
+- [ Content](#content)  
+- [ Acknowledgements](#acknowledgements)  
 
 
 
@@ -17,8 +28,9 @@
 - [x] alterar o nome do site na tab
 - [x] alterar favicon
 - [x] adicionar parallax na imagem do herobanner
-- [ ] mudar textos em portugues para ingles
-- [ ] mudar frase do hero banner
+- [x] mudar textos em portugues para ingles
+- [x] mudar frase do hero banner
+- [x] trocar frase de booking table(profile)
 
 
 
@@ -36,9 +48,10 @@
 - [x] refatorar os apps
 - [x] limpar codigos desnecessarios
 - [ ] adicionar dev flag
-- [ ] criar os textos do banner, about, contato, tutor
-- [ ] completar cadastro dos tutores e adicionar imagens
+- [x] criar os textos do banner, about, contato, tutor
+- [x] completar cadastro dos tutores e adicionar imagens
 - [ ] adicionar validacao
+- [ ] fazer teste automatico
 
 
 
