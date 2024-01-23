@@ -1,3 +1,10 @@
+### README
+
+- [ ] Database schema?
+
+
+
+
 ### FRONTEND
 - [x] mudar o logo
 - [x] arredondar botoes da barra de navegacao
@@ -40,6 +47,7 @@
 - [x] nao esta funcionando os cadastros CSRF forbiden versoes diferente do python
 - [x] reinstalar google chrome (salvar senha antes)
 - [x] instalar um app bitwarden gerenciador de senha.
+- [x] colocar markdown no joplin
 - [ ] passar os aprendizados pra dentro do Joplin, pasta django em markdown.
 
 aprendizados:
