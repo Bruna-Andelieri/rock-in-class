@@ -35,4 +35,4 @@ You can view the live site at **[Rock in Class](https://rock-in-class-324f436b36
 
  ### Wireframes
 
- I have created wireframes for the key pages of the site, utilizing Balsamiq for the design. The following are the wireframes for the main pages:
+ I have created wireframes for the key pages of the site, utilizing Paint3D for the design. The following wireframes for the main pages:
