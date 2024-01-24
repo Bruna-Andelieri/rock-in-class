@@ -1,6 +1,6 @@
 # Rock in Class
 
-![responsive](static/readme_images/responsive.jpg)
+![responsive](docs/readme_images/responsive.jpg)
 
 
 Rock in Class, an online music school, serves as a platform where individuals can discover skilled tutors and schedule online music classes with them.
@@ -31,7 +31,7 @@ You can view the live site at **[Rock in Class](https://rock-in-class-324f436b36
  Upon discovering the name,  I opted for a modern and minimalistic design approach for the website—something straightforward yet easily navigable.
  ### Colors
  The selected primary colors for the website.
- ![color-pallete](static/readme_images/color-palette.jpg)
+ ![color-pallete](docs/readme_images/color-palette.jpg)
 
  ### Wireframes
 
@@ -40,32 +40,32 @@ You can view the live site at **[Rock in Class](https://rock-in-class-324f436b36
 - Home Page
 
  My objective with this project was to create a minimalist website, designed to showcase the tutors of the school's music department. I purposefully kept the page count to a minimum to prioritize and highlight the essential functionality.
- ![home-page](static/readme_images/home-page.jpg)
+ ![home-page](docs/readme_images/home-page.jpg)
 
 - Tutors
 
  The tutors' wireframe is designed to display their pictures, provide a brief introduction, and detail the type of instrument and genre of music they specialize in.
- ![tutors](static/readme_images/tutors.jpg)
+ ![tutors](docs/readme_images/tutors.jpg)
 
 - About
 
 The wireframe for the "About" page includes our contact information and provides a brief overview of who we are.
-![about](static/readme_images/about.jpg)
+![about](docs/readme_images/about.jpg)
 
 - Sign up
 
 The signup wireframe is straightforward, requiring only your username, email, password, and password confirmation.
-![Sign-up](static/readme_images/signup.jpg)
+![Sign-up](docs/readme_images/signup.jpg)
 
 - Sign in
 
 The sign-in wireframe is uncomplicated, requesting only your username and password for authentication.
-![Sign-in](static/readme_images/sigin.jpg)
+![Sign-in](docs/readme_images/sigin.jpg)
 
 - Profile
 
 Within the profile wireframe, you can view your bookings, as well as edit (reschedule) or delete them as needed.
-![profile](static/readme_images/profile.jpg)
+![profile](docs/readme_images/profile.jpg)
 
 
 # User story and Agile
@@ -111,6 +111,45 @@ To see Kanban please click [here](https://github.com/users/Bruna-Andelieri/proje
 
 
 # Features
+
+### Home Page
+It involves a banner featuring the music school's slogan, creating a straightforward website.
+![home-page](docs/readme_images/feat-home.jpg)
+
+### Navegation bar
+It's straightforward – the **logo**(directs to home page), **Tutors** section for class bookings, **Sign In** for existing accounts, and **Sign Up** for new students.
+![nav-bar](docs/readme_images/feat-navbar.jpg)
+
+### About
+In this section, you'll find a brief description of the school, along with the contact email and links to our social media profiles.
+![about](docs/readme_images/feat-about.jpg)
+
+### Tutors
+- This section you can find out more about the Tutors.
+Each tutor has a brief description highlighting the genre of music they specialize in and the instruments they play.
+![tutors](docs/readme_images/feat-tutors.jpg)
+
+- For tutors who haven't a profile picture yet, a default image is provided.
+![tutors-default](docs/readme_images/feat-tutors-default.jpg)
+
+- When logged into the website, you can book a class directly from the tutors' page.
+![tutors-booking](docs/readme_images/feat-booking.jpg)
+
+### Sign up
+- This section is for sign up to the website. There is a validation of the password.
+![sigup](docs/readme_images/feat-signup.jpg)
+
+- Once you've successfully signed up on the website, feedback will appear at the top of the page.
+![signup-logon](docs/readme_images/feat-sucessfuly-signed.jpg)
+
+### Sign in
+Once you have your account you can sign in if your username and password.
+![signin](docs/readme_images/feat-signin.jpg)
+
+### Profile
+This section the student could reschedule or delete a booking.
+![profile](docs/readme_images/feat-profile.jpg)
+
 
 # Technology used
 

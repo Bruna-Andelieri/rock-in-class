@@ -4,11 +4,19 @@
 - [ ] Flowchart
 - [ UX ](#ux) ok
 - [ User Story and Agile Development](#user-story-and-agile) ok
-- [ Features ](#features)  
+- [ Features ](#features) ok
+    - home page ok
+    - nav bar ok 
+    - footer ?
+    - tutors - falta alterar a frase de sign in first e tirar print.
+    - sign in - ok
+    - sign up - ok
+    - profile- ok
+    - about ok
 - [ Technology used ](#technology-used)ok
 - [ Testing ](#testing)  
 - [ Bugs ](#bugs)  
-- [ Deployment](#deployment) doing
+- [ Deployment](#deployment) ok
 - [ Credits](#credits)
 - [ Content](#content)  
 - [ Acknowledgements](#acknowledgements)  
@@ -31,6 +39,9 @@
 - [x] mudar textos em portugues para ingles
 - [x] mudar frase do hero banner
 - [x] trocar frase de booking table(profile)
+- [ ] direcionar links
+- [ ] para pessoas nao logadas adicionar uma frase: se deseja bookar sign up first.
+
 
 
 
@@ -51,6 +62,8 @@
 - [x] criar os textos do banner, about, contato, tutor
 - [x] completar cadastro dos tutores e adicionar imagens
 - [ ] adicionar validacao
+- [ ] testar com pep8 e black
+- [ ] corrigir bug
 - [ ] fazer teste automatico
 
 
