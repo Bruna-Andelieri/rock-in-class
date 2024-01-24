@@ -40,8 +40,7 @@
 - [x] mudar frase do hero banner
 - [x] trocar frase de booking table(profile)
 - [ ] direcionar links
-- [ ] para pessoas nao logadas adicionar uma frase: se deseja bookar sign up first.
-
+- [x] para pessoas nao logadas adicionar uma frase: se deseja bookar sign up first.
 
 
 
@@ -61,9 +60,9 @@
 - [ ] adicionar dev flag
 - [x] criar os textos do banner, about, contato, tutor
 - [x] completar cadastro dos tutores e adicionar imagens
-- [ ] adicionar validacao
+- [x] adicionar validacao
 - [ ] testar com pep8 e black
-- [ ] corrigir bug
+- [x] corrigir bug
 - [ ] fazer teste automatico
 
 
