@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/pre-commit/mirrors-flake8
+    rev: v3.9.2
+    hooks:
+      - id: flake8
+        exclude: migrations,settings.py,.venv/
+        args: [--max-line-length=120, --ignore=E402,E501]
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 23.12.1
+    hooks:
+      - id: black
+        exclude: migrations,settings.py,.venv/
+        args: [--max-line-length=120, --ignore=E402,E501]
+        language_version: python3.11

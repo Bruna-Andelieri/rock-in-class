@@ -1,4 +1,6 @@
-{
+{   
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
     "sqltools.useNodeRuntime": true,
     "sqltools.connections": [
         {
