@@ -5,15 +5,18 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('tutor', '0002_alter_tutor_avatar_image'),
+        ("tutor", "0002_alter_tutor_avatar_image"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='tutor',
-            name='avatar_image',
-            field=cloudinary.models.CloudinaryField(default='https://res.cloudinary.com/difmdvoze/image/upload/v1705534784/static/images/placeholder.webp', max_length=255, verbose_name='image'),
+            model_name="tutor",
+            name="avatar_image",
+            field=cloudinary.models.CloudinaryField(
+                default="https://res.cloudinary.com/difmdvoze/image/upload/v1705534784/static/images/placeholder.webp",
+                max_length=255,
+                verbose_name="image",
+            ),
         ),
     ]

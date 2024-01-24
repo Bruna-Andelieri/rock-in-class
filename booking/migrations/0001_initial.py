@@ -6,24 +6,45 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('tutor', '0001_initial'),
+        ("tutor", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Booking',
+            name="Booking",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('booking_date', models.DateField()),
-                ('booking_time', models.CharField(max_length=5)),
-                ('message', models.CharField(max_length=200, unique=True)),
-                ('student', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='booking_student', to=settings.AUTH_USER_MODEL)),
-                ('tutor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='booking_tutor', to='tutor.tutor')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("booking_date", models.DateField()),
+                ("booking_time", models.CharField(max_length=5)),
+                ("message", models.CharField(max_length=200, unique=True)),
+                (
+                    "student",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="booking_student",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "tutor",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="booking_tutor",
+                        to="tutor.tutor",
+                    ),
+                ),
             ],
         ),
     ]

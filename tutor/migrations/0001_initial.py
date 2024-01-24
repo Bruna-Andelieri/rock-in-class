@@ -6,41 +6,78 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Instrument',
+            name="Instrument",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, unique=True)),
-                ('color', models.CharField(max_length=6)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50, unique=True)),
+                ("color", models.CharField(max_length=6)),
             ],
         ),
         migrations.CreateModel(
-            name='MusicStyle',
+            name="MusicStyle",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, unique=True)),
-                ('color', models.CharField(max_length=6)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50, unique=True)),
+                ("color", models.CharField(max_length=6)),
             ],
         ),
         migrations.CreateModel(
-            name='Tutor',
+            name="Tutor",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-                ('email', models.CharField(max_length=200, unique=True)),
-                ('description', models.TextField()),
-                ('avatar_image', cloudinary.models.CloudinaryField(default='placeholder', max_length=255, verbose_name='image')),
-                ('updated_on', models.DateTimeField(auto_now=True)),
-                ('created_on', models.DateTimeField(auto_now_add=True)),
-                ('instrument', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tutor.instrument')),
-                ('music_styles', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='tutor.musicstyle')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                ("email", models.CharField(max_length=200, unique=True)),
+                ("description", models.TextField()),
+                (
+                    "avatar_image",
+                    cloudinary.models.CloudinaryField(default="placeholder", max_length=255, verbose_name="image"),
+                ),
+                ("updated_on", models.DateTimeField(auto_now=True)),
+                ("created_on", models.DateTimeField(auto_now_add=True)),
+                (
+                    "instrument",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="tutor.instrument",
+                    ),
+                ),
+                (
+                    "music_styles",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="tutor.musicstyle",
+                    ),
+                ),
             ],
         ),
     ]
