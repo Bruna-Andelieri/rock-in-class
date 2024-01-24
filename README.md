@@ -177,3 +177,27 @@ To see Kanban please click [here](https://github.com/users/Bruna-Andelieri/proje
   - Choose the nearest Region and Data Center for your location.
   - Once the database is created, click on its name to access details such as the database URL and Password.
 </details>
+
+<details>
+<summary>Local Deployment</summary>
+
+Feel free to clone or fork this project to establish a local copy on your system.
+#### Cloning 
+To clone the project please follow the steps bellow:
+
+- Visit the GitHub repository
+- Find the Code button above the file list, and click it. 
+- Choose your preferred cloning method (HTTPS, SSH, or GitHub CLI) and click the copy button to copy the URL. 
+- Open the Terminal, navigate to the desired directory, and in your IDE Terminal, enter the command:
+  - git clone https://github.com/Bruna-Andelieri/rock-in-class.git
+- Press Enter to create your local clone.
+
+#### Forking
+Forking the GitHub repository allows you to create a duplicate of the original repository, enabling you to view or make changes without impacting the original. This can be done by:
+
+- Sign in to GitHub or sign up for an account.
+- Find the repository.
+- On the repository page, at the upper right corner, choose "Fork" from the available buttons.
+- A duplicate of the repository will be generated in your personal repository.
+
+</details>
