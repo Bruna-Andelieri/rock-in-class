@@ -15,7 +15,7 @@ from tutor.models import Tutor
 @login_required
 def delete_booking(request, booking_id):
     # get booking object
-    booking = get_object_or_404(Booking, pk=booking_id)
+    booking = get_object_or_404(Booking, pk=booking_id, student=request.user.id)
 
     if request.method == 'POST':
         form = DeleteBookingForm(request.POST)
@@ -34,7 +34,7 @@ def delete_booking(request, booking_id):
 @login_required
 def edit_booking(request, booking_id):
     # get booking object
-    booking = get_object_or_404(Booking, pk=booking_id)
+    booking = get_object_or_404(Booking, pk=booking_id, student=request.user.id)
 
     if request.method == 'POST':
         # create booking form
@@ -57,9 +57,7 @@ def edit_booking(request, booking_id):
     return render(request, 'booking/edit_booking.html', {'form': form, "booking_id": booking_id})
 
 
-
-
-
+@login_required
 def save_booking(request, tutor_id):
     
     tutor = get_object_or_404(Tutor, id=tutor_id)
