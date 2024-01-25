@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="container pt-5 pb-5 text-center">
-  <h1 class="jumbotron-heading">Who They Are?</h1>
+  <h1 class="jumbotron-heading">Who Are They?</h1>
   <div class="container mt-5">
     <div class="container text-center">
       <div class="row">
@@ -57,7 +57,7 @@
 <!-- Booking Component - not logged in-->
 <div class="form-content">
   <div class="container mt-5">
-    <p  class="text-center">Do you like to book a class?</p>
+    <p class="text-center">Do you like to book a class?</p>
     <div class="row justify-content-center">
       <form class="login col-md-6 mx-auto" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
