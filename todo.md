@@ -1,25 +1,29 @@
 ### README
 
-- [ ] Database schema?
-- [ ] Flowchart
 - [ UX ](#ux) ok
+    - Database schema?
+    - Flowchart
+
 - [ User Story and Agile Development](#user-story-and-agile) ok
 - [ Features ](#features) ok
     - home page ok
     - nav bar ok 
-    - footer ?
-    - tutors - falta alterar a frase de sign in first e tirar print.
+    - tutors - ok
     - sign in - ok
     - sign up - ok
     - profile- ok
     - about ok
 - [ Technology used ](#technology-used)ok
-- [ Testing ](#testing)  
+- [ Testing ](#testing) 
+    - manual testing
+    - html
+    - css
+    - python
 - [ Bugs ](#bugs)  
 - [ Deployment](#deployment) ok
-- [ Credits](#credits)
-- [ Content](#content)  
-- [ Acknowledgements](#acknowledgements)  
+- [ Credits](#credits) ok
+- [ Content](#content) ok 
+- [ Acknowledgements](#acknowledgements) ok
 
 
 
@@ -61,7 +65,7 @@
 - [x] criar os textos do banner, about, contato, tutor
 - [x] completar cadastro dos tutores e adicionar imagens
 - [x] adicionar validacao
-- [ ] testar com pep8 e black
+- [x] testar com pep8 e black
 - [x] corrigir bug
 - [ ] fazer teste automatico
 

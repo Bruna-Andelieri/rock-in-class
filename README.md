@@ -132,6 +132,9 @@ Each tutor has a brief description highlighting the genre of music they speciali
 - For tutors who haven't a profile picture yet, a default image is provided.
 ![tutors-default](docs/readme_images/feat-tutors-default.jpg)
 
+- Upon selecting the tutors for your class, a message will be displayed to sign in beforehand.
+![tutors-signin](docs/readme_images/feat-tutors-book.jpg)
+
 - When logged into the website, you can book a class directly from the tutors' page.
 ![tutors-booking](docs/readme_images/feat-booking.jpg)
 
@@ -151,25 +154,64 @@ This section the student could reschedule or delete a booking.
 ![profile](docs/readme_images/feat-profile.jpg)
 
 
+# Testing
+
+- Manual testing:
+
+|   Test  |                    Expected                    | Result |
+|:-------:|:----------------------------------------------:|:------:|
+| Sign Up | user able to type an username                  | pass   |
+|         | user able to type an email                     | pass   |
+|         | user able to type a password                   | pass   |
+|         | user able to type a password confirmation      | pass   |
+|         |                                                |        |
+| Sign In | user able to type an username                  | pass   |
+|         | user able to type a password                   | pass   |
+|         | user able to log out                           | pass   |
+|         |                                                |        |
+| User    | user able to click about page                  | pass   |
+|         | user able to click tutors page                 | pass   |
+|         | user able to click sign in page                | pass   |
+|         | user able to click sign up page                | pass   |
+|         | user able to click links to social media       | pass   |
+|         | user able to navigate trhough the website      | pass   |
+|         |                                                |        |
+| Booking | student able to booking a class                | pass   |
+|         | student able to select the date                | pass   |
+|         | student able to select the time of the class   | pass   |
+|         | student able to edit booking                   | pass   |
+|         | student able to delete booking                 | pass   |
+|         | student able to save booking in profile        | pass   |
+|         |                                                |        |
+| Admin   |                                                |        |
+|         | admin able to log in django panel              | pass   |
+|         | admin able to add, edit and delete tutors      | pass   |
+|         | admin able to edit and delete bookings         | pass   |
+|         | admin able to add, edit and delete instruments | pass   |
+|         | admin able to add, edit and delete music style | pass   |
+|         |                                                |        |
+|         |                                                |        |
+
+
 # Technology used
 
-- [HTML](https://html.spec.whatwg.org/) is the standard markup language for documents designed to be displayed in a web browser.
+[HTML](https://html.spec.whatwg.org/) is the standard markup language for documents designed to be displayed in a web browser.
 
-- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.
+[CSS](https://www.w3.org/Style/CSS/Overview.en.html) Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.
 
-- [JavaScript](https://www.javascript.com/) is a programming language that adds interactivity to your website.
+[JavaScript](https://www.javascript.com/) is a programming language that adds interactivity to your website.
 
-- [Bootstrap 5](https://getbootstrap.com/) is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and (optionally) Javascript.
+[Bootstrap 5](https://getbootstrap.com/) is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and (optionally) Javascript.
 
-- [Python](https://www.python.org/) is an interpreted, high-level, and general-purpose programming language.
+[Python](https://www.python.org/) is an interpreted, high-level, and general-purpose programming language.
 
-- [Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+[Django](https://www.djangoproject.com/) is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
 
-- [ElephantSQL](https://www.elephantsql.com/) is a well-tuned and optimized PostgreSQL databases system.
+[ElephantSQL](https://www.elephantsql.com/) is a well-tuned and optimized PostgreSQL databases system.
 
-- [Cloudinary](https://cloudinary.com/) is a cloud service that offers a solution to a web application's entire image management pipeline.
+[Cloudinary](https://cloudinary.com/) is a cloud service that offers a solution to a web application's entire image management pipeline.
 
-- [Heroku](https://www.heroku.com/) is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+[Heroku](https://www.heroku.com/) is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
 # Deployment
 
@@ -240,3 +282,36 @@ Forking the GitHub repository allows you to create a duplicate of the original r
 - A duplicate of the repository will be generated in your personal repository.
 
 </details>
+
+
+# Credits
+
+[Unplash](https://unsplash.com/) is a go-to platform for high-quality, freely usable images contributed by photographers, serving diverse creative needs.
+All images I used in this website are sourced from Unsplash, and due credit goes to the generous photographers who have shared their work for free use.
+
+- Tutor "Bob" - Photo by <a href="https://unsplash.com/@jerec_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jeremias Ybañez</a> on <a href="https://unsplash.com/photos/a-man-holding-a-guitar-while-standing-next-to-a-microphone-Q0NOkBPGtU8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+- Tutor "Michael" - Photo by <a href="https://unsplash.com/@adrianlinaresfoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Adrian Linares</a> on <a href="https://unsplash.com/photos/man-in-black-jacket-playing-electric-keyboard-dWVRLLhmyL0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+- Tutor "Alice" - Photo by <a href="https://unsplash.com/@xan868?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ruslan Mingazhov</a> on <a href="https://unsplash.com/photos/a-woman-sitting-at-a-piano-on-a-beach-ijOz6pNmUew?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+- Tutor "Emma" - Photo by <a href="https://unsplash.com/@imjustintime?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Justin Clark</a> on <a href="https://unsplash.com/photos/a-woman-holding-a-guitar-in-a-field-mK8bHYCtLrg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+  
+  
+
+# Content
+
+[W3 Schools](https://www.w3schools.com/) was employed for various research and tutorials related to HTML and CSS. 
+
+[Stack Overflow](https://stackoverflow.com/) was utilized to seek answers and clarification for questions. 
+
+[PEP8 ORG](https://pep8.org/) provided solutions for flags concerning diagrams in the PEP8 Validator.
+
+# Acknowledgements
+
+In conclusion, I want to convey my sincere gratitude to the individuals and communities mentioned below:
+
+- Code Institute provided me with essential support and guidance during the project's development, thanks to my mentor Rohit Sharma, the helpful Slack community, and the invaluable support from my Cohort and colleagues in our class.
+
+- My partner, Ivan, who not only assisted me with coding but also believed in me. His unwavering support has enabled my transition into the field of software development, and I am genuinely thankful for his contributions, which played a crucial role in the success and completion of this project.
