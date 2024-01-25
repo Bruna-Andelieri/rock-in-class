@@ -15,7 +15,7 @@
     - about ok
 - [ Technology used ](#technology-used)ok
 - [ Testing ](#testing) 
-    - manual testing
+    - manual testing- ok
     - html
     - css
     - python
