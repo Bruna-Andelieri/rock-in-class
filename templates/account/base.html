@@ -14,7 +14,7 @@
   <meta name="author" content="Bruna Andelieri">
   <meta name="keywords" content="rock-in-class, music-class, musicclass, music, class, school, online">
   <meta name="description" content="Online music class - Rock in class">
-  <meta name="theme-color" content="#fca311"/>
+  <meta name="theme-color" content="#fca311" />
   <!-- links -->
   <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
   <!--google fonts -->
@@ -34,17 +34,17 @@
     .parallax {
       /* The image used */
       background-image: url("{% static 'images/banner.webp' %}");
-    
+
       /* Set a specific height */
-      min-height: 800px; 
-    
+      min-height: 800px;
+
       /* Create the parallax scrolling effect */
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
-    </style>
+  </style>
 </head>
 
 <body>
@@ -73,7 +73,7 @@
             <a class="nav-link" href="{% url 'tutor' %}">Tutors</a>
           </li>
           {% if user.is_authenticated %}
-          <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}?scroll=scroll">Sign Out</a></li>
           <li class="nav-item">
             <a class="nav-link" aria-label="profile" href="{% url 'profile' %}"><i
                 class="fa-solid fa-circle-user"></i></a>
@@ -110,7 +110,7 @@
   </header>
 
 
-  <div  id="scroll"></div>
+  <div id="scroll"></div>
 
   <!-- error form setup -->
   {% if form.errors %}
