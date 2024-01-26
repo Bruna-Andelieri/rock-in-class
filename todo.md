@@ -19,7 +19,7 @@
     - html - ok
     - python- ok
     - lighthouse- ok
-- [ Bugs ](#bugs)  
+- [ Bugs ](#bugs) ok
 - [ Deployment](#deployment) ok
 - [ Credits](#credits) ok
 - [ Content](#content) ok 

@@ -16,7 +16,7 @@ You can view the live site at **[Rock in Class](https://rock-in-class-324f436b36
  3. [ Features ](#features)  
  4. [ Technology used ](#technology-used) 
  5. [ Testing ](#testing)  
- 6. [ Bugs ](#bugs)  
+ 6. [ Bug ](#bug)  
  7. [ Deployment](#deployment)
  8. [ Credits](#credits)
  9. [ Content](#content)  
