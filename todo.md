@@ -19,6 +19,7 @@
     - html
     - css
     - python
+    - lighthouse
 - [ Bugs ](#bugs)  
 - [ Deployment](#deployment) ok
 - [ Credits](#credits) ok
