@@ -2,7 +2,7 @@
 
 - [ UX ](#ux) ok
     - Database schema?
-    - Flowchart
+    - Flowchart - ok
 
 - [ User Story and Agile Development](#user-story-and-agile) ok
 - [ Features ](#features) ok
@@ -14,11 +14,11 @@
     - profile- ok
     - about ok
 - [ Technology used ](#technology-used)ok
-- [ Testing ](#testing) 
+- [ Testing ](#testing) ok
     - manual testing- ok
-    - html
-    - python
-    - lighthouse
+    - html - ok
+    - python- ok
+    - lighthouse- ok
 - [ Bugs ](#bugs)  
 - [ Deployment](#deployment) ok
 - [ Credits](#credits) ok
@@ -43,7 +43,7 @@
 - [x] mudar textos em portugues para ingles
 - [x] mudar frase do hero banner
 - [x] trocar frase de booking table(profile)
-- [ ] direcionar links
+- [x] direcionar links
 - [x] para pessoas nao logadas adicionar uma frase: se deseja bookar sign up first.
 
 

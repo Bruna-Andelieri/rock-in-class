@@ -26,6 +26,12 @@ You can view the live site at **[Rock in Class](https://rock-in-class-324f436b36
 
  Rock in Class is a conceptual online music school that I conceived and developed a website for. The primary objective of the website is to provide users with the ability to explore available tutors, assess their offerings, and, if satisfied, create an account to schedule music classes.
 
+ ## Flowchart
+
+The flowchart proved to be a valuable tool for strategic planning and gaining insights into the construction of the application. The chart that was created using [Draw.io](https://www.drawio.com/).
+
+![Flowchart](docs/readme_images/flowchart.jpg)
+
  ## Design
 
  Upon discovering the name,  I opted for a modern and minimalistic design approach for the website—something straightforward yet easily navigable.
