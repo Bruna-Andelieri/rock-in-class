@@ -217,6 +217,14 @@ I have used [CI Python](https://pep8ci.herokuapp.com/) for some files.
 
 ![Lighthouse](docs/readme_images/lighthouse.jpg)
 
+# Bug
+
+My primary issue occurred during the initial deployment of my project with Heroku. In an attempt to diagnose the problem, I set Debug to True, which resulted in the following error:
+![error](docs/readme_images/erro-forbidden403.jpg)
+
+To resolve the error, a tutor assisted me. The issue stemmed from a different Python version, requiring the addition of a file named runtime.txt in the project's root directory.
+
+
 # Technology used
 
 [HTML](https://html.spec.whatwg.org/) is the standard markup language for documents designed to be displayed in a web browser.
