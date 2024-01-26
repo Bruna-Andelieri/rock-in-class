@@ -17,7 +17,6 @@
 - [ Testing ](#testing) 
     - manual testing- ok
     - html
-    - css
     - python
     - lighthouse
 - [ Bugs ](#bugs)  

@@ -155,8 +155,9 @@ This section the student could reschedule or delete a booking.
 
 
 # Testing
+In my project, I utilize a manual testing. I employ a range of tools to validate HTML  and Python code.I have integrated performance checks from Google Lighthouse as well.
 
-- Manual testing:
+### Manual testing:
 
 |   Test  |                    Expected                    | Result |
 |:-------:|:----------------------------------------------:|:------:|
@@ -192,6 +193,23 @@ This section the student could reschedule or delete a booking.
 |         |                                                |        |
 |         |                                                |        |
 
+
+### HTML validator
+
+![HTML](docs/readme_images/html-validator.jpg)
+
+### Python and Django
+
+Because of the numerous Python files in my projec I have install [Flake8](https://pypi.org/project/flake8-django/) in my terminal for testing Python and Django. 
+
+![Flake](docs/readme_images/flake-validator.jpg)
+
+I have used [CI Python](https://pep8ci.herokuapp.com/) for some files.
+![Python](docs/readme_images/python-linter.jpg)
+
+### Accessibility 
+
+![Lighthouse](docs/readme_images/lighthouse.jpg)
 
 # Technology used
 
