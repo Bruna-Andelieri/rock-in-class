@@ -27,7 +27,9 @@ class TutorListViewTest(unittest.TestCase):
 
     @patch("tutor.views.Tutor.objects.all")
     def test_tutor_list_view(self, mock_tutors):
-        mock_tutors.return_value = [Tutor(**data) for data in self.mocked_tutors]
+        mock_tutors.return_value = [
+            Tutor(**data) for data in self.mocked_tutors
+        ]
         request = self.request_factory.get("/tutor")
 
         response = tutor_list(request)

@@ -11,7 +11,9 @@ from booking.views import delete_booking
 class DeleteBookingViewTest(unittest.TestCase):
     @patch("booking.views.get_object_or_404")
     @patch("booking.views.messages.success")
-    def test_delete_booking_view(self, mock_messages_success, mock_get_object_or_404):
+    def test_delete_booking_view(
+        self, mock_messages_success, mock_get_object_or_404
+    ):
         user = MagicMock()
         booking_id = 1
         booking = MagicMock()
@@ -29,11 +31,15 @@ class DeleteBookingViewTest(unittest.TestCase):
 
         delete_booking(request, booking_id)
 
-        mock_get_object_or_404.assert_called_once_with(Booking, pk=booking_id, student=request.user)
+        mock_get_object_or_404.assert_called_once_with(
+            Booking, pk=booking_id, student=request.user
+        )
 
         booking.delete.assert_called_once()
 
-        mock_messages_success.assert_called_once_with(request, "Booking deleted successful")
+        mock_messages_success.assert_called_once_with(
+            request, "Booking deleted successful"
+        )
 
     @patch("booking.views.get_object_or_404")
     def test_delete_booking_view_not_post(self, mock_get_object_or_404):
@@ -51,12 +57,16 @@ class DeleteBookingViewTest(unittest.TestCase):
 
         response = delete_booking(request, booking_id)
 
-        mock_get_object_or_404.assert_called_once_with(Booking, pk=booking_id, student=request.user)
+        mock_get_object_or_404.assert_called_once_with(
+            Booking, pk=booking_id, student=request.user
+        )
 
         self.assertEqual(response.status_code, 200)
 
     @patch("booking.views.get_object_or_404", side_effect=Http404)
-    def test_delete_booking_view_booking_not_found(self, mock_get_object_or_404):
+    def test_delete_booking_view_booking_not_found(
+        self, mock_get_object_or_404
+    ):
         user = MagicMock()
         booking_id = 1
 
@@ -69,4 +79,6 @@ class DeleteBookingViewTest(unittest.TestCase):
         with self.assertRaises(Http404):
             delete_booking(request, booking_id)
 
-        mock_get_object_or_404.assert_called_once_with(Booking, pk=booking_id, student=request.user)
+        mock_get_object_or_404.assert_called_once_with(
+            Booking, pk=booking_id, student=request.user
+        )

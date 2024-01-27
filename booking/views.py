@@ -18,11 +18,15 @@ def delete_booking(request, booking_id):
         if form.is_valid() and form.cleaned_data["delete"]:
             booking.delete()
             messages.success(request, "Booking deleted successful")
-            return redirect("profile")  # Redirecione para onde desejar após a exclusão
+            return redirect("profile")
     else:
         form = DeleteBookingForm()
 
-    return render(request, "booking/delete_booking.html", {"form": form, "booking_id": booking_id})
+    return render(
+        request,
+        "booking/delete_booking.html",
+        {"form": form, "booking_id": booking_id},
+    )
 
 
 @login_required
@@ -45,7 +49,11 @@ def edit_booking(request, booking_id):
         # create a booking instance
         form = BookingEditForm(instance=booking)
 
-    return render(request, "booking/edit_booking.html", {"form": form, "booking_id": booking_id})
+    return render(
+        request,
+        "booking/edit_booking.html",
+        {"form": form, "booking_id": booking_id},
+    )
 
 
 @login_required

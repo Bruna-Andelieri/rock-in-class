@@ -60,7 +60,11 @@ class Migration(migrations.Migration):
                 ("description", models.TextField()),
                 (
                     "avatar_image",
-                    cloudinary.models.CloudinaryField(default="placeholder", max_length=255, verbose_name="image"),
+                    cloudinary.models.CloudinaryField(
+                        default="placeholder",
+                        max_length=255,
+                        verbose_name="image",
+                    ),
                 ),
                 ("updated_on", models.DateTimeField(auto_now=True)),
                 ("created_on", models.DateTimeField(auto_now_add=True)),

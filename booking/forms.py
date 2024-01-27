@@ -19,7 +19,9 @@ class BookingForm(forms.ModelForm):
 
     booking_date = forms.DateField(
         required=True,
-        widget=forms.DateInput(attrs={"class": "form-control datepicker", "type": "date"}),
+        widget=forms.DateInput(
+            attrs={"class": "form-control datepicker", "type": "date"}
+        ),
     )
 
     message = forms.CharField(
@@ -39,12 +41,17 @@ class BookingForm(forms.ModelForm):
 
         cleaned_data = super().clean()
         booking_date = cleaned_data.get("booking_date")
-        booking_time = datetime.strptime(cleaned_data.get("booking_time"), "%H:%M").time()
+        booking_time = datetime.strptime(
+            cleaned_data.get("booking_time"), "%H:%M"
+        ).time()
 
         if booking_date <= current_date and booking_time <= current_time:
             raise ValidationError("Booking should be greather than today")
 
-        if Booking.objects.filter(booking_date=booking_date, booking_time=cleaned_data.get("booking_time")).exists():
+        if Booking.objects.filter(
+            booking_date=booking_date,
+            booking_time=cleaned_data.get("booking_time"),
+        ).exists():
             raise ValidationError("Tutor is not available this day.")
 
     class Meta:
@@ -55,7 +62,11 @@ class BookingForm(forms.ModelForm):
             "tutor": forms.HiddenInput(),
         }
 
-        labels = {"booking_date": "Date", "booking_time": "Time", "message": "Message"}
+        labels = {
+            "booking_date": "Date",
+            "booking_time": "Time",
+            "message": "Message",
+        }
 
 
 # forms.py
@@ -70,7 +81,9 @@ class BookingEditForm(forms.ModelForm):
 
     booking_date = forms.DateField(
         required=True,
-        widget=forms.DateInput(attrs={"class": "form-control datepicker", "type": "date"}),
+        widget=forms.DateInput(
+            attrs={"class": "form-control datepicker", "type": "date"}
+        ),
     )
 
     message = forms.CharField(
@@ -90,12 +103,19 @@ class BookingEditForm(forms.ModelForm):
 
         cleaned_data = super().clean()
         booking_date = cleaned_data.get("booking_date")
-        booking_time = datetime.strptime(cleaned_data.get("booking_time"), "%H:%M").time()
+        booking_time = datetime.strptime(
+            cleaned_data.get("booking_time"), "%H:%M"
+        ).time()
 
-        if booking_date <= current_date or (booking_date <= current_date and booking_time <= current_time):
+        if booking_date <= current_date or (
+            booking_date <= current_date and booking_time <= current_time
+        ):
             raise ValidationError("Booking should be greather than today")
 
-        if Booking.objects.filter(booking_date=booking_date, booking_time=cleaned_data.get("booking_time")).exists():
+        if Booking.objects.filter(
+            booking_date=booking_date,
+            booking_time=cleaned_data.get("booking_time"),
+        ).exists():
             raise ValidationError("Tutor is not available this day.")
 
     class Meta:
@@ -106,7 +126,11 @@ class BookingEditForm(forms.ModelForm):
             "tutor": forms.HiddenInput(),
         }
 
-        labels = {"booking_date": "Date", "booking_time": "Time", "message": "Message"}
+        labels = {
+            "booking_date": "Date",
+            "booking_time": "Time",
+            "message": "Message",
+        }
 
 
 class UserForm(UserChangeForm):
@@ -121,4 +145,9 @@ class UserForm(UserChangeForm):
 
 
 class DeleteBookingForm(forms.Form):
-    delete = forms.BooleanField(required=True, widget=forms.HiddenInput, initial=True, label="Are you sure?")
+    delete = forms.BooleanField(
+        required=True,
+        widget=forms.HiddenInput,
+        initial=True,
+        label="Are you sure?",
+    )

@@ -35,7 +35,9 @@ def page_profile(request):
 
     student = request.user.id
     bookings = Booking.objects.filter(student=student).all()
-    return render(request, "pages/profile.html", {"form": form, "bookings": bookings})
+    return render(
+        request, "pages/profile.html", {"form": form, "bookings": bookings}
+    )
 
 
 def error_404(request, exception):

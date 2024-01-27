@@ -36,7 +36,11 @@ X_FRAME_OPTIONS = "SAMEORIGIN"
 
 ACCOUNT_AUTHENTICATION_METHOD = "username"
 
-ALLOWED_HOSTS = ["rock-in-class-324f436b36b0.herokuapp.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "rock-in-class-324f436b36b0.herokuapp.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition
