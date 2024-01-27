@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .forms import BookingForm, DeleteBookingForm
+from .forms import BookingEditForm, BookingForm, DeleteBookingForm
 from .models import Booking
 from tutor.models import Tutor
 
@@ -32,7 +32,7 @@ def edit_booking(request, booking_id):
 
     if request.method == "POST":
         # create booking form
-        form = BookingForm(request.POST, instance=booking)
+        form = BookingEditForm(request.POST, instance=booking)
 
         if form.is_valid():
             form.save()
@@ -43,7 +43,7 @@ def edit_booking(request, booking_id):
             messages.error(request, "Ops... Something goes wrong")
     else:
         # create a booking instance
-        form = BookingForm(instance=booking)
+        form = BookingEditForm(instance=booking)
 
     return render(request, "booking/edit_booking.html", {"form": form, "booking_id": booking_id})
 

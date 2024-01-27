@@ -192,6 +192,7 @@ In my project, I utilize a manual testing. I employ a range of tools to validate
 | Booking | student able to booking a class                | pass   |
 |         | student able to select the date                | pass   |
 |         | student able to select the time of the class   | pass   |
+|         | student not able to book in a past date        | pass   |
 |         | student able to edit booking                   | pass   |
 |         | student able to delete booking                 | pass   |
 |         | student able to save booking in profile        | pass   |
