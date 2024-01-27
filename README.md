@@ -217,6 +217,12 @@ I have used [CI Python](https://pep8ci.herokuapp.com/) for some files.
 
 ![Lighthouse](docs/readme_images/lighthouse.jpg)
 
+### Unit test
+
+I conducted unit tests in the terminal and added a test.py file. To run the tests, I utilized the following command:
+`python manage.py test --verbosity=2`
+
+![test](docs/readme_images/unit-test.jpg)
 # Bug
 
 My primary issue occurred during the initial deployment of my project with Heroku. In an attempt to diagnose the problem, I set Debug to True, which resulted in the following error:
