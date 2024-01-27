@@ -32,6 +32,12 @@ The flowchart proved to be a valuable tool for strategic planning and gaining in
 
 ![Flowchart](docs/readme_images/flowchart.jpg)
 
+## Entity Relationship Diagram
+The Entity Relationship Diagram (ERD) was generated using Database designer (for android), providing a visual representation of the database structure. It illustrates the tables, their respective columns, and the relationships between them. The following is the ERD derived from my planning:
+
+![ERD](docs/readme_images/erd.png)
+
+
  ## Design
 
  Upon discovering the name,  I opted for a modern and minimalistic design approach for the website—something straightforward yet easily navigable.
