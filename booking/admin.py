@@ -11,14 +11,15 @@ class BookingAdmin(admin.ModelAdmin):
         "booking_date",
         "booking_time",
         "message",
-    ]  # Lista todas as colunas do modelo
+    ]
 
     def display_tutor(self, obj):
-        return (
-            obj.tutor.name if obj.tutor else None
-        )  # Substitua pelo campo que deseja exibir
+        """
+        Displays the name of the tutor associated with the given object.
+        """
+        return obj.tutor.name if obj.tutor else None
 
-    display_tutor.short_description = "Tutor"  # Define um título para a coluna
+    display_tutor.short_description = "Tutor"
 
 
 admin.site.register(Booking, BookingAdmin)

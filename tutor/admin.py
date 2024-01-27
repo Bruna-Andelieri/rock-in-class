@@ -16,11 +16,17 @@ class TutorAdmin(admin.ModelAdmin):
     ]
 
     def display_instrument(self, obj):
+        """
+        Retrieves and displays the name of the instrument.
+        """
         return obj.instrument.name if obj.instrument else None
 
     display_instrument.short_description = "Instrument"
 
     def display_music_styles(self, obj):
+        """
+        Retrieves and displays the name of music styles.
+        """
         return obj.music_styles.name if obj.music_styles else None
 
     display_music_styles.short_description = "Music Styles"

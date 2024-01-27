@@ -14,6 +14,9 @@ class DeleteBookingViewTest(unittest.TestCase):
     def test_delete_booking_view(
         self, mock_messages_success, mock_get_object_or_404
     ):
+        """
+        Test case for the delete_booking view.
+        """
         user = MagicMock()
         booking_id = 1
         booking = MagicMock()
@@ -43,6 +46,9 @@ class DeleteBookingViewTest(unittest.TestCase):
 
     @patch("booking.views.get_object_or_404")
     def test_delete_booking_view_not_post(self, mock_get_object_or_404):
+        """
+        Test case for the delete_booking_view not post
+        """
         user = MagicMock()
         booking_id = 1
         booking = MagicMock()
@@ -67,6 +73,9 @@ class DeleteBookingViewTest(unittest.TestCase):
     def test_delete_booking_view_booking_not_found(
         self, mock_get_object_or_404
     ):
+        """
+        Test case for the delete_booking view not found
+        """
         user = MagicMock()
         booking_id = 1
 

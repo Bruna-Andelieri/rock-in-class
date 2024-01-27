@@ -9,11 +9,17 @@ from tutor.models import Tutor
 
 # Create your views here.
 def page_index(request):
+    """
+    Renders the index page with a list of the latest three tutors.
+    """
     tutors = Tutor.objects.all().order_by("-id")[:3]
     return render(request, "pages/index.html", {"tutors": tutors})
 
 
 def page_about(request):
+    """
+    Renders the about page.
+    """
     return render(request, "pages/about.html")
 
 
@@ -41,4 +47,7 @@ def page_profile(request):
 
 
 def error_404(request, exception):
+    """
+    Renders the custom 404 error page.
+    """
     return render(request, "pages/404.html")

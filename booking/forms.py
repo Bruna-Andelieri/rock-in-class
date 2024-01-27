@@ -36,6 +36,12 @@ class BookingForm(forms.ModelForm):
     )
 
     def clean(self):
+        """
+        Cleans and validates the input data.
+
+        Checks if the booking date and time are valid,
+        and ensures that the tutor is available.
+        """
         current_date = datetime.now().date()
         current_time = datetime.now().time()
 
@@ -98,6 +104,12 @@ class BookingEditForm(forms.ModelForm):
     )
 
     def clean(self):
+        """
+        Cleans and validates the input data.
+
+        Checks if the booking date and time are valid,
+        and ensures that the tutor is available.
+        """
         current_date = datetime.now().date()
         current_time = datetime.now().time()
 

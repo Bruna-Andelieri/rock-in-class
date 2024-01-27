@@ -9,6 +9,9 @@ from tutor.models import Tutor
 
 class TutorListViewTest(unittest.TestCase):
     def setUp(self):
+        """
+        Set up the test environment by initializing common resources.
+        """
         self.request_factory = RequestFactory()
         self.mocked_tutors = [
             {
@@ -27,6 +30,9 @@ class TutorListViewTest(unittest.TestCase):
 
     @patch("tutor.views.Tutor.objects.all")
     def test_tutor_list_view(self, mock_tutors):
+        """
+        Test case for the tutor_list view.
+        """
         mock_tutors.return_value = [
             Tutor(**data) for data in self.mocked_tutors
         ]
@@ -37,6 +43,9 @@ class TutorListViewTest(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_tutor_detail_view(self):
+        """
+        Test case for the tutor_detail view.
+        """
         mock_tutor = Mock()
         mock_tutor.id = 1
         mock_tutor.name = "Mock Tutor"

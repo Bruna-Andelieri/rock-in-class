@@ -10,6 +10,9 @@ from tutor.models import Tutor
 # Create your views here.
 @login_required
 def delete_booking(request, booking_id):
+    """
+    For deleting booking
+    """
     # get booking object
     booking = get_object_or_404(Booking, pk=booking_id, student=request.user)
 
@@ -31,6 +34,9 @@ def delete_booking(request, booking_id):
 
 @login_required
 def edit_booking(request, booking_id):
+    """
+    For edit booking
+    """
     # get booking object
     booking = get_object_or_404(Booking, pk=booking_id, student=request.user)
 
@@ -58,6 +64,9 @@ def edit_booking(request, booking_id):
 
 @login_required
 def save_booking(request, tutor_id):
+    """
+    For save the booking
+    """
     tutor = get_object_or_404(Tutor, id=tutor_id)
 
     if request.method == "POST":
